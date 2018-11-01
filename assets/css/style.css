@@ -127,4 +127,11 @@ section {
 footer {
     text-align: center;
     bottom: 0;
+    height: 120px;
+    padding-top: 30px;
+}
+
+#smImg {
+    max-width: 25px;
+    max-height: 25px;
 }
