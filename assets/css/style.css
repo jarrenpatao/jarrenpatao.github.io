@@ -50,6 +50,14 @@ h2 {
     text-align: left;
 }
 
+h3 {
+    padding: 10px;
+    font-size: 24px;
+    color: #777;
+    text-align: left;
+    font-weight: 800;
+}
+
 hr {
     background-color: #ddd;
     height: 3px;
@@ -108,11 +116,13 @@ aside {
 footer {
     background-color: #666;
     color: #FFF;
-    height: 80px;
+    height: 120px;
     text-align: center;
     font-family: Arial;
-    padding-bottom: 0px;
-    border-top: #4aaaa5, 5px;
+    bottom: 0px;
+    border-top: #4aaaa5;
+    padding-top: 30px;
+    border-top: 5px;
 }
 
 section {
@@ -120,13 +130,6 @@ section {
     margin-right: 10%;
     float: right;
     margin-top: 40px;
-}
-
-footer {
-    text-align: center;
-    bottom: 0;
-    height: 120px;
-    padding-top: 30px;
 }
 
 .port {
@@ -188,4 +191,27 @@ footer {
 .main img {
     display: inherit;
     max-width: 100%;
+}
+
+/* textarea shit */
+
+textarea {
+    padding: 10px;
+    line-height: 1.5;
+    display: block;
+    font-size: 12px;
+    letter-spacing: 1px;
+    width: 80%;
+    height: 150px;
+}
+    
+label {
+    margin-bottom: 5px;
+    display: block;
+    font-size: 12px;
+    letter-spacing: 1px;
+}
+
+form {
+    align-content: left;
 }
