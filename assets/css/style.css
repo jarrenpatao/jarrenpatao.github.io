@@ -6,31 +6,54 @@
 .namePlate {
     width: 175px;
     height: 100px;
+    margin-bottom: 0;
+    margin-left: 10%;
+    float: left;
 }   
 
 header {
     background-color: #fff;
-    padding-top: 15px;
+    height:  100px;
+    border-bottom: #777, 1px;
+    position: relative;
 }
 
 body {
-    background: #777;
+    background: #ddd;
 }
 
 #pImg {
-    max-width: 200px;
+    max-width: 10%;
+    border-radius: 10px;
     float: left;
+    margin-right: 10px; 
 }
 
 h1 {
     background: #4aaaa5;
+    font-size: 28px;
+    font-weight: 900;
     font-family: 'Georgia', Times, 'Times New Roman', serif; 
     color: #fff;
-    text-align: center;
     width: 250px;
     height: 100px;
     padding-top: 40px;
     padding-bottom: 10px;
+}
+
+h2 {
+    font-size: 28px;
+    font-family: Georgia;
+    font-weight: 900;
+    color: #4aaaa5;
+    text-align: left;
+}
+
+p {
+    line-height: 25px;
+    margin: 0 auto;
+    margin: 15px;
+    text-align: left;
 }
 
 aside {
@@ -43,30 +66,39 @@ aside {
 .nav {
     background-color: #FFF;
     color: #777;
+    margin-right: 0; 
+    position: absolute;
     float: right;
-    display: block;
-    margin-bottom: 0; 
-    position: relative;
+    width: 200px;
+    height: 100px;
+    font-family: Arial;
 }
 
-.full {
-    background-color: #ddd;
-    display: inline;
+.navbar {
+    background: #fff;
+    color: #777;
+    width: 300px;
+    height: 60px;
+    font-family: Helvetica;
+    position: relative;
 
 }
 
 .main {
     background-color: #FFF;
-    border-top: 8px;
-    border-top-color: #4aaaa5;
     display: block;
-    margin: 0 auto;    
+    margin: 0 auto;   
+    border-radius: 12px;
+    padding: 35px;
 }
 
 #container {
     margin: 0 auto;
-    width: 1024px;
+    width: 90%;
     display: block;
+    height: 100%;
+    margin-top: 30px;
+    margin-bottom: 30px;
 }
 
 .clearfix::after {
@@ -82,12 +114,17 @@ footer {
     text-align: center;
     font-family: Arial;
     padding-bottom: 0px;
+    border-top: #4aaaa5, 5px;
 }
 
 section {
-    display: block;
+    position: relative;
+    margin-right: 10%;
+    float: right;
+    margin-top: 40px;
 }
 
 footer {
-    
+    text-align: center;
+    bottom: 0;
 }
