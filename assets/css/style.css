@@ -51,8 +51,8 @@ h2 {
 }
 
 hr {
-    color: #777;
-    border: 2px, #777;
+    background-color: #ddd;
+    height: 3px;
 }
 
 p {
@@ -85,8 +85,9 @@ aside {
     display: block;
     margin: 0 auto;   
     border-radius: 12px;
-    padding: 35px;
+    padding: 50px;
     clear: both;
+    height: 960px;
 }
 
 #container {
@@ -126,6 +127,10 @@ footer {
     bottom: 0;
     height: 120px;
     padding-top: 30px;
+}
+
+.port {
+    margin: 0 auto;
 }
 
 #port1 {
@@ -176,7 +181,6 @@ footer {
     width: 100px;
     height: 30px;
     margin: 0 auto;
-    margin-top: 500px;
     border-radius: 10px;
     
 }
