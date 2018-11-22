@@ -49,6 +49,10 @@ body {
   .pt10 {
     padding-top: 10%;
   }
+
+  .p25p {
+    padding: 25px;
+  }
   
   #mtnav {
     margin-top: 75px;
