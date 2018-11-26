@@ -2,171 +2,87 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <!-- Reset.css -->
-  <link rel="stylesheet" type="text/css" href="assets/css/reset.css">
-  <!-- UI Kit/Twitter Bootstrap -->
-  <link rel="stylesheet" type="text/css" href="now-ui-kit-html-v1.2.0/assets/css/bootstrap.min.css">
-  <link rel="stylesheet" type="text/css" href="now-ui-kit-html-v1.2.0/assets/css/bootstrap.min.css.map">
-  <link rel="stylesheet" type="text/css" href="now-ui-kit-html-v1.2.0/assets/css/now-ui-kit.css">
-  <link rel="stylesheet" type="text/css" href="now-ui-kit-html-v1.2.0/assets/css/now-ui-kit.css.map">
-  <link rel="stylesheet" type="text/css" href="now-ui-kit-html-v1.2.0/assets/css/now-ui-kit.min.css">
+  <!-- Twitter Bootstrap -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
   <!-- Font Awesome -->
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
-  <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css?family=Alice|Parisienne" rel="stylesheet">
   <!-- My css -->
   <link rel="stylesheet" type="text/css" href="assets/css/style.css">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Montserrat|Raleway" rel="stylesheet">
 </head>
 
 <body>
-  <!-- Navbar -->
-<nav class="navbar navbar-expand-lg bg-primary fixed-top">
-  <div class="container">
-    <div class="navbar-translate">
-      <a class="navbar-brand" href="index.html">Jarren Patao</a>
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#example-navbar-primary" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-bar bar1"></span>
-        <span class="navbar-toggler-bar bar2"></span>
-        <span class="navbar-toggler-bar bar3"></span>
-      </button>
-    </div>
-    <div class="collapse navbar-collapse" id="example-navbar-transparent">
-      <ul class="navbar-nav ml-auto">
-        <li class="nav-item">
-          <a class="nav-link" href="https://jarrenpatao.github.com/repositories">
-            <i class="now-ui-icons objects_globe"></i>
-            <p>Projects</p>
-          </a>
-        </li>
-        <li class="nav-item active">
-          <a class="nav-link" href="aboutme.html">
-            <i class="now-ui-icons users_circle-08"></i>
-            <p>Profile</p>
-          </a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="settings.html">
-            <i class="now-ui-icons ui-1_settings-gear-63"></i>
-            <p>Settings</p>
-          </a>
-        </li>
-      </ul>
-    </div>
-  </div>
-</nav>
-
-<!-- Alert : Under Construction -->
-<div class="alert alert-warning" role="alert" id="mtnav">
-    <div class="container">
-      <div class="alert-icon">
-        <i class="now-ui-icons travel_info"></i>
-      </div>
-      <strong>Hiya!</strong>, My website is still under a little construction. 
-      <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-        <span aria-hidden="true">
-          <i class="now-ui-icons ui-1_simple-remove"></i>
-        </span>
-      </button>
-    </div>
-  </div>
-
-<div class="container p25p">
-  <div class="row">
-    <div class="col-md-3 pt10">
-      <img src="assets/images/IMG_0708.JPG" alt="Thumbnail Image" class="rounded-circle img-raised" id="opac">
-    </div>
-    <div class="col-md-6">
-      <img src="assets/images/IMG_0576.JPG" alt="Thumbnail Image" class="rounded-circle img-raised" id="opac">
-    </div>
-    <div class="col-md-3 pt10">
-      <img src="assets/images/IMG_0209.JPG" alt="Thumbnail Image" class="rounded-circle img-raised" id="opac">
-    </div>
-  </div>
-</div>
-
-<div class="container col-md-6">
-
-<div class="card">
-    <div class="card-header">
-      <ul class="nav nav-tabs nav-tabs-neutral justify-content-center" role="tablist" data-background-color="orange">
-        <li class="nav-item">
-          <a class="nav-link active" data-toggle="tab" href="#home1" role="tab">Brand Statement</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" data-toggle="tab" href="#profile1" role="tab">Projects</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" data-toggle="tab" href="#messages1" role="tab">Messages</a>
-        </li>
-      </ul>
-    </div>
-    <div class="card-body">
-      <!-- Tab panes -->
-      <div class="tab-content text-center">
-        <div class="tab-pane active" id="home1" role="tabpanel">
-          <p>Aloha!<br>
-             I'm Jarren Patao, a Full Stack Web Developer specializing in User Experience. I make seamless experiences by utilizing very specific attributes in css/javascript.</p>
-        </div>
-        
-        <!-- Add Tab Panels After JS -->
-        <!-- <div class="tab-pane" id="profile1" role="tabpanel">
-          <p>I've developed a few applications which can be view in my <a href="#">projects</a>.</p>
-        </div>
-        
-        <div class="tab-pane" id="messages1" role="tabpanel">
-          <div class="input-group">
-            <div class="input-group-prepend">
-              <span class="input-group-text"><i class="fa fa-user-circle"></i></span>
-            </div>
-            <input type="text" class="form-control" placeholder="Left Font Awesome Icon">
+  <!-- Main Body -->
+  <div class="container main shadow-lg p-3 mb-5">
+    <!-- Navbar in Jumbotron -->
+    <nav class="navbar navbar-light" style="background-color: transparent">
+        <a class="navbar-brand" href="index.html">
+          <img src="assets/images/GLHFICON copy.png" width="30" height="30" class="d-inline-block align-top" alt="">
+            <h1>Jarren Patao</h1>
+        </a>
+        <a class="btn btn-dark" data-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample">
+          <!-- Hamburger Button -->
+          <i class="fa fa-bars" aria-hidden="true"></i>
+        </a>
+        <div class="collapse" id="collapseExample">
+          <div class="card card-body">
+            <a href="index.html">Home</a>
+            <a href="portfolio.html">Projects</a>
+            <a href="contacts.html">Contact</a>
           </div>
-          <div class="container">
-            <div class="form-group">
-              <input type="text" value="" placeholder="Regular" class="form-control">
+        </div>  
+      </nav>  
+    
+    <div class="container" id="submain">
+      <div class="container col-md-8">
+        <div class="card">
+          <!-- Card Header -->
+          <div class="card-body">
+            <div class="tab-content text-center">
+              <div id="home1">
+                <p>Aloha!</p>
+                <hr>
+
+                <img class="img-thumbnail" alt="Jarren Patao Image" src="assets/images/6W7Y0252copy.jpg" style="max-height: 225px; float: left; margin-right: 10px">
+                <p>
+                  Full Stack Web Developer specializing in User Experience. Making seamless experiences by focusing on specific attributes in CSS and JavaScript with media queries over multiple platforms. Enjoys front end web development and creates dynamic JS specific to clients need. Adaptable and creative with any wireframe types and able to create Twitter Bootstrap website layouts on the fly. Experience with Git, GitHub, GitLab, Firebase, JSON, jQuery, JavaScript, HTML, and CSS.
+                </p>
+              </div>
             </div>
           </div>
-        </div> -->
-
+        </div>
       </div>
     </div>
-  </div>
-</div>
+    <!-- Footer -->
+    <footer>
+      <div class="container">
+      
+      <p>2018 © Copyright | <a href="https://jarrenpatao.github.io">Jarren Patao</a> : Full Stack Web Developer</p>
+  
+        <a href="https://www.github.com/jarrenpatao" target="_blank">
+          <img src="assets/images/github_circle_color-512.png">
+        </a>
+        <a href="https://www.linkedin.com/in/jarrenpatao" target="_blank">
+          <img src="assets/images/linkedin_circle-512.png">
+        </a>
+        <a href="https://www.instagram.com/grubheavy" target="_blank">
+          <img src="assets/images/instagram-512.png">
+        </a>
+  
+      </div>
+    </footer>
 
-  <script src="assets/javascript/jsmain.js"></script>
-  <script src="now-ui-kit-html-v1.2.0/assets/js/core/bootstrap.min.js"></script>
-  <script src="now-ui-kit-html-v1.2.0/assets/js/core/jquery.min.js"></script>
-  <script src="now-ui-kit-html-v1.2.0/assets/js/core/popper.min.js"></script>
-  <script src="now-ui-kit-html-v1.2.0/assets/js/now-ui-kit.js"></script>
-  <script src="now-ui-kit-html-v1.2.0/assets/js/now-ui-kit.js.map"></script>
-  <script src="now-ui-kit-html-v1.2.0/assets/js/now-ui-kit.min.js"></script>
-  <script src="now-ui-kit-html-v1.2.0/assets/js/plugins/bootstrap-datepicker.js"></script>
-  <script src="now-ui-kit-html-v1.2.0/assets/js/plugins/bootstrap-switch.js"></script>
-  <script src="now-ui-kit-html-v1.2.0/assets/js/plugins/nouislider.min.js"></script>
+  </div>
+  
+  <script
+  src="https://code.jquery.com/jquery-3.3.1.min.js"
+  integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+  crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+  <script src="assets/javascript/logic.js"></script>
+  
 </body>
-<!-- Footer -->
-<footer data-background-color="white">
-  <div class="container">
-    
-    <p>2018 © Copyright | Jarren Patao : Full Stack Web Developer | UI Kit by <a href="https://www.creative-tim.com/">Creative Tim</a></p>
-    
-    
-    <script>
-      document.getElementById('copyright').appendChild(document.createTextNode(new Date().getFullYear()))
-    </script>
-
-      <a href="https://www.github.com/jarrenpatao" target="_blank">
-        <img src="assets/images/github_circle_color-512.png">
-      </a>
-      <a href="https://www.linkedin.com/in/jarrenpatao" target="_blank">
-        <img src="assets/images/linkedin_circle-512.png">
-      </a>
-      <a href="https://www.instagram.com/grubheavy" target="_blank">
-        <img src="assets/images/instagram-512.png">
-      </a>
-
-    </div>
-  </div>
-</footer>
 
 </html>

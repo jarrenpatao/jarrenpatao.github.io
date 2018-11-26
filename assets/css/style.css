@@ -1,72 +1,60 @@
-body {
-    background: url("../images/IMG_2271.JPG");
-    /* background-color: #777; */
-    background-size: 100%;
-    background-attachment: fixed;
-    background-repeat: no-repeat;
-  }
-  
-  .bg-transparent {
-    background-color: #777;
-    opacity: 0.8;
-  }
-  
-  h1 {
-    font-family: 'Parisienne', cursive;;
-    font-size: 35px;
-  }
-  
-  footer {
-    bottom: 0;
-    width: 100%;
-    height: 40px;
-    opacity: 0.8;
-    padding-top: 5px;
-    font-size: 12px;
-  }
-  
-  footer img {
-    float: right;
-    height: 25px;
-    padding-right: 10px;
-    padding-top: 5px;
-  }
-  
-  footer p {
-    float: left;
-  }
-  
-  /* .bg-blk {
-    margin-top: 3%;
-    padding-top: 10px;
-    background-color: red;
-    border: 1px, solid, #000;
-    opacity: 0.6;
-    color: #fff;
-    border-radius: 8px;
-  } */
-  
-  .pt10 {
-    padding-top: 10%;
-  }
+/* Divs */
+.jumbotron {
+  margin-top: 20px;
+  background: url("../images/IMG_0209.JPG");
+  border-left: 200px solid darkolivegreen;
+}
+#submain {
+  margin: 0 auto;
+  padding: 50px;
+  border-radius: 7px;
+}
+.main {
+  margin-top: 5px;
+}
+.card {
+  background: url('../images/opaqWhite.png'); 
+}
 
-  .p25p {
-    padding: 25px;
-  }
-  
-  #mtnav {
-    margin-top: 75px;
-  }
-  
-  #opac {
-    mask-image:(rgba(0,0,0,1));
-    -webkit-mask-image: -webkit-gradient(linear, left top, 
-      left bottom, from(rgba(0,0,0,1)), to(rgba(0,0,0,0)));
-  }
-  
-  #sizer {
-    margin: 0 auto;
-    max-height: 400px;
-    max-width: 500px;
-  }
-  
+/* Text Elements */
+p, text {
+  font-family: 'Raleway', sans-serif;
+}
+h1 {
+  font-family: 'Montserrat', sans-serif;
+  color: aliceblue;
+}
+a {
+  color: rgb(190, 248, 240);
+}
+a:hover {
+  color: darkred;
+}
+
+/* Main Page Elements */
+body {
+  background-color: black;
+  background: url("../images/IMG_8131.JPG");
+  background-attachment: fixed;
+}
+nav img {
+  float: left;
+  margin-right: 15px;
+  margin-top: 8px;
+}
+
+/* Footer */
+footer {
+  margin-top: 20px;
+  padding-bottom: 38px;
+  color: aliceblue;
+}
+footer img {
+  height: 40px;
+  width: 40px;
+  float: right;
+  padding: 5px;
+}
+footer p {
+  float: left;
+}
