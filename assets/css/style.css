@@ -1,60 +1,19 @@
-/* Divs */
-.jumbotron {
-  margin-top: 20px;
-  background: url("../images/IMG_0209.JPG");
-  border-left: 200px solid darkolivegreen;
-}
-#submain {
-  margin: 0 auto;
-  padding: 50px;
-  border-radius: 7px;
-}
-.main {
-  margin-top: 5px;
-}
-.card {
-  background: url('../images/opaqWhite.png'); 
-}
-
-/* Text Elements */
-p, text {
-  font-family: 'Raleway', sans-serif;
-}
-h1 {
-  font-family: 'Montserrat', sans-serif;
-  color: aliceblue;
-}
-a {
-  color: rgb(190, 248, 240);
-}
-a:hover {
-  color: darkred;
-}
-
-/* Main Page Elements */
-body {
-  background-color: black;
-  background: url("../images/IMG_8131.JPG");
-  background-attachment: fixed;
-}
-nav img {
-  float: left;
-  margin-right: 15px;
-  margin-top: 8px;
-}
-
-/* Footer */
-footer {
-  margin-top: 20px;
-  padding-bottom: 38px;
-  color: aliceblue;
-}
-footer img {
+#hLogo {
   height: 40px;
   width: 40px;
-  float: right;
-  padding: 5px;
+  margin-left: 15px;
+  margin-right: 15px;
 }
-footer p {
+#mainBody {
+  background-color: black;
+  height: 400px;
+  width: 600px;
+  flex: 1 0;
+  border-radius: 5px;
+  margin-top: 10px;
+  display: none;
+}
+#navvy {
   float: left;
+  margin-right: 100px;
 }
