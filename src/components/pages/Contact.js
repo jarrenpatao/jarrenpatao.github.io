@@ -41,6 +41,7 @@ function Contact() {
                   validate
                   error="wrong"
                   success="right"
+                  name="_subject"
                 />
                 <MDBInput
                   type="textarea"

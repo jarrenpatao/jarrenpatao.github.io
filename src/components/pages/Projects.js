@@ -32,7 +32,7 @@ function Projects() {
                 Rupert was created by <a href="https://www.github.com/orionabrams">Orion</a>, <a href="https://www.github.com/amandamurillo">Amanda</a>, <a href="https://www.github.com/zimanzm">Ziman</a>, and <a href="https://www.github.com/jarrenpatao">myself</a> to help find top movies that you might be looking for.
               </MDBCardText>
               <MDBBtn color="white" size="md">
-                <a href="https://github.com/OrionAbrams/Project-One">GitHub Repository</a>
+                <a href="https://rupert-movie-companion.herokuapp.com/">Go Ask Rupert</a>
               </MDBBtn>
             </MDBCardBody>
           </MDBCard>
@@ -49,10 +49,10 @@ function Projects() {
             <MDBCardBody>
               <MDBCardTitle tag="h5">Bill¥: Payment Assistant</MDBCardTitle>
               <MDBCardText>
-                Bill¥ is a web application built with a unified bill system in mind. Created with <a href="https://github.com/Hellsrevenge/">Varvara</a> and <a href="https://github.com/mpoblete27/">Mickey</a>.
+                Bill¥ is a web application built with a unified bill system in mind. This project is still a work in progress. Created with <a href="https://github.com/Hellsrevenge/">Varvara</a> and <a href="https://github.com/mpoblete27/">Mickey</a>.
               </MDBCardText>
               <MDBBtn color="white" size="md">
-                <a href="https://github.com/Hellsrevenge/Project-2-BillY">GitHub Repository</a>
+                <a href="https://billy2019.herokuapp.com">Track Some Bills</a>
               </MDBBtn>
             </MDBCardBody>
           </MDBCard>
@@ -76,7 +76,7 @@ function Projects() {
                 This is an onClick based JavaScript game where it gives each crystal a randomly generated whole value, which you then need to meet the target number.
               </MDBCardText>
               <MDBBtn color="white" size="md">
-                <a href="https://github.com/jarrenpatao/unit-4-game">GitHub Repository</a>
+                <a href="https://jarrenpatao.github.io/unit-4-game">Crystal Clicker</a>
               </MDBBtn>
             </MDBCardBody>
           </MDBCard>
@@ -93,10 +93,10 @@ function Projects() {
             <MDBCardBody>
               <MDBCardTitle tag="h5">Trivia Game: E = MCHammer</MDBCardTitle>
               <MDBCardText>
-                This is a JavaScript based trivia game where most of the questions are opinionated, but it iterates over jQuery click events and setTimeouts.
+                This is a JavaScript based trivia game where most of the questions are opinionated, but it works with jQuery click events and setTimeouts.
               </MDBCardText>
               <MDBBtn color="white" size="md">
-                <a href="https://github.com/jarrenpatao/TriviaGame">GitHub Repository</a>
+                <a href="https://jarrenpatao.github.io/TriviaGame">Opinionated Trivia</a>
               </MDBBtn>
             </MDBCardBody>
           </MDBCard>

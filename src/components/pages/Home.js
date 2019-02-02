@@ -22,7 +22,10 @@ function Home() {
             <strong>About me :</strong> MERN Stack Developer - MongoDB, Express (Web Server), React.js, Node.js.
             <br />
             Other technologies I've used are <i>HTML5/CSS3, JS, APIs, Twitter Bootstrap, Handlebars, MobX, jQuery, Firebase, SQL/MySQL, Sequelize, and MVC</i> 
+            <br />
+            I'm also into creative stuff in general like music and photography.
           </p>
+
         </MDBCol>
       </MDBRow>
 
