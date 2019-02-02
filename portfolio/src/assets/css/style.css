@@ -1,0 +1,9 @@
+h1 {
+  text-align: center;
+}
+
+.splash {
+  max-height: 100vh;
+  max-width: 100%;
+  text-align: center;
+}
