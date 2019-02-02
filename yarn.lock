@@ -2493,7 +2493,7 @@ color-string@^1.5.2:
     color-name "^1.0.0"
     simple-swizzle "^0.2.2"
 
-color@^3.0.0, color@^3.1.0:
+color@^3.0.0:
   version "3.1.0"
   resolved "https://registry.yarnpkg.com/color/-/color-3.1.0.tgz#d8e9fb096732875774c84bf922815df0308d0ffc"
   integrity sha512-CwyopLkuRYO5ei2EpzpIh6LqJMt6Mt+jZhO5VI5f/wJLZriXQE32/SSqzmrh+QB+AZT81Cj8yv+7zwToW8ahZg==
@@ -4951,11 +4951,6 @@ imurmurhash@^0.1.4:
   version "0.1.4"
   resolved "https://registry.yarnpkg.com/imurmurhash/-/imurmurhash-0.1.4.tgz#9218b9b2b928a238b13dc4fb6b6d576f231453ea"
   integrity sha1-khi5srkoojixPcT7a21XbyMUU+o=
-
-in-viewport@^3.6.0:
-  version "3.6.0"
-  resolved "https://registry.yarnpkg.com/in-viewport/-/in-viewport-3.6.0.tgz#c59b4cdcaa41adb5bf5b8fe390c7d34259891f4a"
-  integrity sha512-MhaJ7Pr3NhUyAfpULysTZZBUAYfJAX1O8PccW2gvXlbQduMrJz7qQQ5yzC7SAr/0g5LbeRk432yNjsLMCnYzJg==
 
 indefinite-observable@^1.0.1:
   version "1.0.2"
@@ -8405,7 +8400,7 @@ react-autowhatever@^10.1.2:
     react-themeable "^1.1.0"
     section-iterator "^2.0.0"
 
-react-chartjs-2@^2.7.0:
+react-chartjs-2@^2.7.0, react-chartjs-2@^2.7.4:
   version "2.7.4"
   resolved "https://registry.yarnpkg.com/react-chartjs-2/-/react-chartjs-2-2.7.4.tgz#e41ea4e81491dc78347111126a48e96ee57db1a6"
   integrity sha512-lXTpBaDlk9rIMjRONjZd76dIUhEm3vOp2jOrJrsFG/UpFI5VqX8Xw83apVHTnUGJ968f8i/i/syLddls4NHy2g==
@@ -8480,15 +8475,6 @@ react-is@^16.6.3, react-is@^16.7.0:
   resolved "https://registry.yarnpkg.com/react-is/-/react-is-16.7.0.tgz#c1bd21c64f1f1364c6f70695ec02d69392f41bfa"
   integrity sha512-Z0VRQdF4NPDoI0tsXVMLkJLiwEBa+RP66g0xDHxgxysxSoCUccSten4RTF/UFvZF1dZvZ9Zu1sx+MDXwcOR34g==
 
-react-lazy-hero@^2.0.0:
-  version "2.0.0"
-  resolved "https://registry.yarnpkg.com/react-lazy-hero/-/react-lazy-hero-2.0.0.tgz#00f226e084b35752bdd0556544f9522a326ac982"
-  integrity sha512-P1oKvIFNnV0yKuQwWEF/UnapLxjkuTdUJfoPaeOEKIWIhKbaGqGnNJ6nrwtuJJTxR0seiVFx4NHJOAdnImLs5Q==
-  dependencies:
-    color "^3.1.0"
-    in-viewport "^3.6.0"
-    prop-types "^15.6.2"
-
 react-lifecycles-compat@^3.0.0, react-lifecycles-compat@^3.0.2, react-lifecycles-compat@^3.0.4:
   version "3.0.4"
   resolved "https://registry.yarnpkg.com/react-lifecycles-compat/-/react-lifecycles-compat-3.0.4.tgz#4f1a273afdfc8f3488a8c516bfda78f872352362"
@@ -8508,6 +8494,11 @@ react-numeric-input@^2.2.3:
   version "2.2.3"
   resolved "https://registry.yarnpkg.com/react-numeric-input/-/react-numeric-input-2.2.3.tgz#4bf5918c3eafed851a80df1eb992d941002bb552"
   integrity sha1-S/WRjD6v7YUagN8euZLZQQArtVI=
+
+react-parallax@^2.1.0:
+  version "2.1.0"
+  resolved "https://registry.yarnpkg.com/react-parallax/-/react-parallax-2.1.0.tgz#3e9e88c8663d7dbe1019322cec2bb791fc6c6ead"
+  integrity sha512-L2cA4u5d1I0jovKJUVWL4ygAhuzCfHLTOTuU020nj87McapHzrsbuuICSfKCH1woHDgWuBuftthBi0cVph+gWg==
 
 react-popper@^0.7.5:
   version "0.7.5"
@@ -8596,18 +8587,6 @@ react-scripts@2.1.3:
     workbox-webpack-plugin "3.6.3"
   optionalDependencies:
     fsevents "1.2.4"
-
-react-scroll-parallax@^1.3.5:
-  version "1.3.5"
-  resolved "https://registry.yarnpkg.com/react-scroll-parallax/-/react-scroll-parallax-1.3.5.tgz#14a799f4773922c7feb5e31dc8a2acdb783e49d6"
-  integrity sha512-r/F6FKdpNDvnIeWAZ1zT5x5wBU7inm9Z0j6+0OLcM4VrvS/I0xZLa6ScZt3NyaQoqhu0ze/AcwPqwTvMH96b3Q==
-  dependencies:
-    prop-types "^15.5.10"
-
-react-simple-parallax@^0.2.6:
-  version "0.2.6"
-  resolved "https://registry.yarnpkg.com/react-simple-parallax/-/react-simple-parallax-0.2.6.tgz#d98557796e9b6b723c1230ba1dc8eb42bef50ac3"
-  integrity sha1-2YVXeW6ba3I8EjC6HcjrQr71CsM=
 
 react-text-mask@=5.4.1:
   version "5.4.1"

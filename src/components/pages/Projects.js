@@ -9,9 +9,7 @@ function Projects() {
     
     <MDBContainer>
     <hr />
-      <MDBJumbotron>
-        <h1><strong>Projects</strong></h1>
-      </MDBJumbotron>
+    
       <MDBContainer>
         <MDBRow>
           <MDBCol>

@@ -1,5 +1,12 @@
-h1 {
+h1,h2{
   text-align: center;
+}
+
+h2 .paraText{
+  text-align: center;
+  margin-top: 100px;
+  font-weight: 700;
+  color: #fff;
 }
 
 p .aboutMe {
@@ -12,6 +19,12 @@ p .aboutMe {
   max-width: 200px;
   border-radius: 15px;
   float: left;
+}
+
+.paraBlock {
+  height: 300px;
+  border-radius: 25px;
+  margin-bottom: 25px;
 }
 
 .blockquote {

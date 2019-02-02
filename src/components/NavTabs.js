@@ -13,7 +13,7 @@ function NavTabs() {
     >
       <MDBContainer>
         <MDBNavbarBrand>
-          <strong className="white-text">Jarren Patao : <i>GLHF</i></strong>
+          <strong className="white-text"><h1>Jarren Patao : <i>GLHF</i></h1></strong>
           <hr/>
           <small className="text-muted">Full Stack Web Developer</small>
         </MDBNavbarBrand>
