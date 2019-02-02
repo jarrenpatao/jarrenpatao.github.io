@@ -10,7 +10,7 @@ function Contact() {
     <hr />
       <div>
       <MDBRow className="my-5">
-          <MDBCol md="6">
+          <MDBCol>
             <form action="https://formspree.io/jarrenpatao@gmail.com" method="POST">
               <p className="h5 text-center mb-4">Contact me here!</p>
               <div className="grey-text">
@@ -47,6 +47,7 @@ function Contact() {
                   rows="2"
                   label="Your message"
                   icon="pencil-alt"
+                  name="name"
                 />
               </div>
               <div className="text-center">
