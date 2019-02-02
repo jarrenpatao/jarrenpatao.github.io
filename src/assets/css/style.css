@@ -2,6 +2,22 @@ h1 {
   text-align: center;
 }
 
+p .aboutMe {
+  margin-left: 25px;
+}
+
+.profPic {
+  margin-right: 15px;
+  margin-bottom: 5px;
+  max-width: 200px;
+  border-radius: 15px;
+  float: left;
+}
+
+.blockquote {
+  max-width: 100%;
+}
+
 .splash {
   max-height: 100vh;
   max-width: 100%;

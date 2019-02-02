@@ -13,7 +13,9 @@ function NavTabs() {
     >
       <MDBContainer>
         <MDBNavbarBrand>
-          <strong className="white-text">Jarren Patao : Full Stack Web Developer</strong>
+          <strong className="white-text">Jarren Patao : <i>GLHF</i></strong>
+          <hr/>
+          <small className="text-muted">Full Stack Web Developer</small>
         </MDBNavbarBrand>
           <MDBNavbarNav right>
             <MDBNavItem>

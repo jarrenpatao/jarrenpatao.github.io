@@ -51,7 +51,7 @@ function Projects() {
               <MDBCardText>
                 Bill¥ is a web application built with a unified bill system in mind. Created with <a href="https://github.com/Hellsrevenge/">Varvara</a> and <a href="https://github.com/mpoblete27/">Mickey</a>.
               </MDBCardText>
-              <MDBBtn color="primary" size="md">
+              <MDBBtn color="white" size="md">
                 <a href="https://github.com/Hellsrevenge/Project-2-BillY">GitHub Repository</a>
               </MDBBtn>
             </MDBCardBody>
@@ -64,20 +64,39 @@ function Projects() {
             <hr />
             <MDBCard>
             <MDBCardImage
-              src="https://mdbootstrap.com/img/Photos/Others/images/77.jpg"
-              alt="MDBCard image cap"
+              src="https://i.imgur.com/OEhitpq.png"
+              alt="Crystal Clicker: First JavaScript Application"
               top
               hover
               overlay="white-slight"
             />
             <MDBCardBody>
-              <MDBCardTitle tag="h5">Panel title</MDBCardTitle>
+              <MDBCardTitle tag="h5">Crystal Clicker: First JavaScript Application</MDBCardTitle>
               <MDBCardText>
-                Some quick example text to build on the card title and make up
-                the bulk of the card's content.
+                This is an onClick based JavaScript game where it gives each crystal a randomly generated whole value, which you then need to meet the target number.
               </MDBCardText>
-              <MDBBtn color="primary" size="md">
-                read more
+              <MDBBtn color="white" size="md">
+                <a href="https://github.com/jarrenpatao/unit-4-game">GitHub Repository</a>
+              </MDBBtn>
+            </MDBCardBody>
+          </MDBCard>
+          <hr />
+          {/* Objectional Quiz */}
+          <MDBCard>
+            <MDBCardImage
+              src="https://i.imgur.com/tqXoNHF.jpg"
+              alt="Trivia Game: Mostly Opinionated"
+              top
+              hover
+              overlay="white-slight"
+            />
+            <MDBCardBody>
+              <MDBCardTitle tag="h5">Trivia Game: E = MCHammer</MDBCardTitle>
+              <MDBCardText>
+                This is a JavaScript based trivia game where most of the questions are opinionated, but it iterates over jQuery click events and setTimeouts.
+              </MDBCardText>
+              <MDBBtn color="white" size="md">
+                <a href="https://github.com/jarrenpatao/TriviaGame">GitHub Repository</a>
               </MDBBtn>
             </MDBCardBody>
           </MDBCard>
