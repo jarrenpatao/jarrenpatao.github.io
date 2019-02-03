@@ -30,7 +30,7 @@ function Home() {
             // blur={5}
             bgImage={require('../../assets/images/AOE2.jpg')}
             bgImageAlt="Haiku Mill | Maui, HI"
-            strength={340}
+            strength={150}
             borderRadius={20}>
             <div className="paraBlock"></div>
           </Parallax>
@@ -39,9 +39,9 @@ function Home() {
       </MDBRow>
       <MDBRow>
         <MDBCol>
-          <p>Lorem ipsum dolor amet 8-bit squid everyday carry iPhone. Vice jianbing marfa synth fam asymmetrical vaporware copper mug food truck keffiyeh wolf photo booth literally seitan. Tofu banh mi hashtag fanny pack listicle. Umami before they sold out affogato prism four loko letterpress disrupt flexitarian health goth biodiesel gastropub cronut. Vape ethical humblebrag yuccie cornhole wolf 90's. Banjo pug VHS asymmetrical beard messenger bag marfa knausgaard freegan tousled pickled butcher.
+          {/* <p>Lorem ipsum dolor amet 8-bit squid everyday carry iPhone. Vice jianbing marfa synth fam asymmetrical vaporware copper mug food truck keffiyeh wolf photo booth literally seitan. Tofu banh mi hashtag fanny pack listicle. Umami before they sold out affogato prism four loko letterpress disrupt flexitarian health goth biodiesel gastropub cronut. Vape ethical humblebrag yuccie cornhole wolf 90's. Banjo pug VHS asymmetrical beard messenger bag marfa knausgaard freegan tousled pickled butcher.
           <br /><br />
-          Lyft deep v iPhone biodiesel organic trust fund, letterpress skateboard butcher post-ironic mustache. Knausgaard XOXO put a bird on it street art mlkshk biodiesel. Fanny pack man braid thundercats keffiyeh hexagon, sriracha portland before they sold out cred. Squid tote bag enamel pin salvia cliche hell of, crucifix af forage gluten-free narwhal. Oh. You need a little dummy text for your mockup? How quaint. I bet you’re still using Bootstrap too…</p>
+          Lyft deep v iPhone biodiesel organic trust fund, letterpress skateboard butcher post-ironic mustache. Knausgaard XOXO put a bird on it street art mlkshk biodiesel. Fanny pack man braid thundercats keffiyeh hexagon, sriracha portland before they sold out cred. Squid tote bag enamel pin salvia cliche hell of, crucifix af forage gluten-free narwhal. Oh. You need a little dummy text for your mockup? How quaint. I bet you’re still using Bootstrap too…</p> */}
         </MDBCol>
       </MDBRow>
     </MDBContainer>
