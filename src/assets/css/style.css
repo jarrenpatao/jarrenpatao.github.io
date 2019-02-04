@@ -16,7 +16,7 @@ p .aboutMe {
 .profPic {
   margin-right: 15px;
   margin-bottom: 5px;
-  max-width: 200px;
+  max-width: 40%;
   border-radius: 15px;
   float: left;
 }
