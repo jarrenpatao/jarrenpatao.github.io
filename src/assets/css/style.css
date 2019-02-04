@@ -33,8 +33,9 @@ b .blockQuoter {
 }
 
 .logoLimit {
-  max-height: 90vh;
-  max-width: 90%;
+  margin: 0 auto;
+  max-height: 50vh;
+  max-width: 50%;
 }
 
 .profPic {
@@ -46,7 +47,7 @@ b .blockQuoter {
 }
 
 .paraBlock {
-  height: 350px;
+  height: 250px;
   border-radius: 25px;
   margin-bottom: 25px;
 }

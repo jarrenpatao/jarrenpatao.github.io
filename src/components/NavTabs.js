@@ -6,7 +6,6 @@ function NavTabs() {
   return (
     <MDBNavbar
       color="bg-dark"
-      style={{ marginTop: "20px" }}
       dark
       expand="md"
       scrolling
