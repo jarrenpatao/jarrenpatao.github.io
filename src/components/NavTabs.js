@@ -5,7 +5,7 @@ import { MDBNavbar, MDBNavbarBrand, MDBNavbarNav, MDBNavItem, MDBNavLink, MDBFor
 function NavTabs() {
   return (
     <MDBNavbar
-      color="bg-info"
+      color="bg-dark"
       style={{ marginTop: "20px" }}
       dark
       expand="md"
