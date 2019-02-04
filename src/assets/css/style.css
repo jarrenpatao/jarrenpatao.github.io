@@ -32,6 +32,11 @@ b .blockQuoter {
   color: yellow;
 }
 
+.logoLimit {
+  max-height: 90vh;
+  max-width: 90%;
+}
+
 .profPic {
   margin-right: 15px;
   margin-bottom: 5px;
