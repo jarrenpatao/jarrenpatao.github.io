@@ -1,34 +1,38 @@
 import React from "react";
-import { Link } from "react-router-dom";
-import { MDBNavbar, MDBNavbarBrand, MDBNavbarNav, MDBNavItem, MDBNavLink, MDBFormInline, MDBDropdown, MDBDropdownToggle, MDBDropdownMenu,  MDBDropdownItem, MDBContainer, MDBIcon } from "mdbreact";
+// import { Link } from "react-router-dom";
+// import { MDBNavbar, MDBNavbarBrand, MDBNavbarNav, MDBNavItem, MDBNavLink, MDBFormInline, MDBDropdown, MDBDropdownToggle, MDBDropdownMenu,  MDBDropdownItem, MDBContainer, MDBIcon } from "mdbreact";
+import "../assets/css/style.css";
 
 function NavTabs() {
   return (
-    <MDBNavbar
-      color="bg-dark"
-      dark
-      expand="md"
-      scrolling
-    >
-      <MDBContainer>
-        <MDBNavbarBrand>
-          <strong className="white-text"><h1>Jarren Patao</h1></strong>
-          <hr/>
-          <small className="text-muted">Full Stack Web Developer</small>
-        </MDBNavbarBrand>
-          <MDBNavbarNav right>
-            <MDBNavItem>
-              <MDBNavLink to="/">Home</MDBNavLink>
-            </MDBNavItem>
-            <MDBNavItem>
-              <MDBNavLink to="/Contact">Contact Me</MDBNavLink>
-            </MDBNavItem>
-            <MDBNavItem>
-              <MDBNavLink to="/Projects">Projects</MDBNavLink>
-            </MDBNavItem>
-          </MDBNavbarNav>
-      </MDBContainer>
-    </MDBNavbar>
+    <nav className="navbar navbar-dark stylish-color mb-4">
+
+      {/* <!-- Navbar brand --> */}
+      <a className="navbar-brand" href="/">Jarren Patao : Web Developer</a>
+
+      {/* <!-- Collapse button --> */}
+      <button className="navbar-toggler second-button" type="button" data-toggle="collapse" data-target="#navbarSupportedContent23"
+        aria-controls="navbarSupportedContent23" aria-expanded="false" aria-label="Toggle navigation">
+        <div className="animated-icon2"><span></span><span></span><span></span><span></span></div>
+      </button>
+
+      {/* <!-- Collapsible content --> */}
+      <div className="collapse navbar-collapse" id="navbarSupportedContent23">
+
+        {/* <!-- Links --> */}
+        <ul className="navbar-nav mr-auto">
+          <li className="nav-item active">
+            <a className="nav-link" href="/home">Home <span className="sr-only">(current)</span></a>
+          </li>
+          <li className="nav-item">
+            <a className="nav-link" href="/contact">Contact</a>
+          </li>
+          <li className="nav-item">
+            <a className="nav-link" href="/projects">Projects</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
   );
 }
 

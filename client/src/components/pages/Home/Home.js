@@ -4,17 +4,15 @@ import { MDBContainer, MDBRow, MDBCol } from "mdbreact";
 import React from "react";
 // ------------------------------ Frills ------------------------------
 import { Parallax } from "react-parallax";
-// import anime from 'lib/anime.es.js';
 import "../../../assets/css/style.css";
+
 
 
 function Home() {
   return (
     
     <div>
-    <hr />
     <Parallax
-      // blur={5}
       bgImage={require('./hawaii.JPG')}
       bgImageAlt="My Logo"
       strength={200}

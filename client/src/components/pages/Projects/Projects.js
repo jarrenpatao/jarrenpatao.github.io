@@ -18,7 +18,7 @@ function Projects() {
             {/* Project 1 : Rupert */}
             <MDBCard>
             <MDBCardImage
-              src="https://i.imgur.com/zx4WWa7.jpg"
+              src="https://i103.photobucket.com/albums/m130/minibalogna00/RSS.png"
               alt="Rupert: Movie Companion | Hosted by Heroku"
               top
               hover
@@ -38,7 +38,7 @@ function Projects() {
           {/* Project 2 : Bill¥ */}
           <MDBCard>
             <MDBCardImage
-              src="https://i.imgur.com/sFrqnJn.png"
+              src="https://i103.photobucket.com/albums/m130/minibalogna00/BSS.png"
               alt="Bill¥: Payment Assistant | Hosted by Heroku"
               top
               hover
@@ -54,6 +54,26 @@ function Projects() {
               </MDBBtn>
             </MDBCardBody>
           </MDBCard>
+          <hr />
+          {/* Project 3 : Fullstack-Network */}
+          <MDBCard>
+            <MDBCardImage
+              src="http://i103.photobucket.com/albums/m130/minibalogna00/FSN_1.png"
+              alt="Fullstack-Network | Hosted by Heroku"
+              top
+              hover
+              overlay="white-slight"
+            />
+            <MDBCardBody color="dark">
+              <MDBCardTitle tag="h5">Fullstack-Network</MDBCardTitle>
+              <MDBCardText>
+              Fullstack-Network was created by <a href="https://www.github.com/orionabrams">Orion</a>, <a href="https://www.github.com/jkawahara">John</a>, <a href="https://www.github.com/Momo0532">Jason</a>, and <a href="https://www.github.com/jarrenpatao">myself</a> to help organize a set of lessons prevalent to boot camps.
+              </MDBCardText>
+              <MDBBtn color="white" size="md">
+                <a href="https://fullstack-network.herokuapp.com/">Coordinate Lessons</a>
+              </MDBBtn>
+            </MDBCardBody>
+          </MDBCard>
           </MDBCol>
 
           {/* GitHub */}
@@ -62,7 +82,7 @@ function Projects() {
             <hr />
             <MDBCard>
             <MDBCardImage
-              src="https://i.imgur.com/OEhitpq.png"
+              src="http://i103.photobucket.com/albums/m130/minibalogna00/Screen%20Shot%202019-02-01%20at%207.33.44%20PM.png"
               alt="Crystal Clicker: First JavaScript Application"
               top
               hover
@@ -82,7 +102,7 @@ function Projects() {
           {/* Objectional Quiz */}
           <MDBCard>
             <MDBCardImage
-              src="https://i.imgur.com/tqXoNHF.jpg"
+              src="http://i103.photobucket.com/albums/m130/minibalogna00/Screen%20Shot%202019-02-01%20at%208.10.20%20PM.png"
               alt="Trivia Game: Mostly Opinionated"
               top
               hover
