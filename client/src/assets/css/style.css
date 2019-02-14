@@ -10,7 +10,7 @@ font-family: 'Petit Formal Script', cursive;
 /* --------------------------------- */
 
 body {
-  background-color: #000;
+  background-color: #4b515d;
 }
 
 h1,h2{
@@ -34,6 +34,10 @@ p .aboutMe {
   max-width: 40%;
   border-radius: 15px;
   float: left;
+}
+
+.newBack {
+  
 }
 
 .paraBlock {
@@ -62,7 +66,8 @@ p .aboutMe {
 
 #root {
   background-color: #4b515d;
-  color: #8ea8bd;
+  background: url('./After.JPG');
+  color: #dfdfdf;
 }
 
 /* Icon 1 */
@@ -234,4 +239,3 @@ p .aboutMe {
   top: 21px;
   left: 8px;
   }
-  

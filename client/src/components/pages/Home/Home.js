@@ -2,8 +2,11 @@
 // import { React, Component } from "react";
 import { MDBContainer, MDBRow, MDBCol } from "mdbreact";
 import React from "react";
+// ---------------------------------- Navi ---------------------------------------
+import NavTabs from "../../NavTabs";
 // ------------------------------ Frills ------------------------------
-import { Parallax } from "react-parallax";
+import { ParallaxBanner } from 'react-scroll-parallax';
+// import { Parallax } from "react-parallax";
 import "../../../assets/css/style.css";
 
 
@@ -12,14 +15,24 @@ function Home() {
   return (
     
     <div>
-    <Parallax
-      bgImage={require('./hawaii.JPG')}
-      bgImageAlt="My Logo"
-      strength={200}
-      borderRadius={20}>
-    <div className="paraBlock"></div>
-    </Parallax>
-    <br />
+    <ParallaxBanner
+      className="your-class"
+      layers={[{
+        image: 'https://i.imgur.com/JhXaId2.jpg',
+        amount: 0.1,
+        slowerScrollRate: false,
+      },
+      {
+        image: 'https://i.imgur.com/JhXaId2.jpg',
+        amount: 0.2,
+        slowerScrollRate: false,
+      },]}
+      style={{
+          height: '500px',
+      }}
+      >
+    </ParallaxBanner>
+    <NavTabs />
     <MDBContainer>
       <MDBRow>
         <MDBCol sm="1"></MDBCol>
@@ -38,7 +51,6 @@ function Home() {
           <div className="floatLeft">
           <p className="aboutMe">  
             Other technologies I've used are <i>HTML5/CSS3, JS, APIs, Twitter Bootstrap, Handlebars, MobX, jQuery, Firebase, SQL/MySQL, Sequelize, and MVC</i> 
-            <br />
           </p>
           </div>
         </MDBCol>
