@@ -39,7 +39,7 @@ function Home() {
         <MDBCol sm="10">
           <img className="profPic" alt="Cheers!" src="http://i103.photobucket.com/albums/m130/minibalogna00/6W7Y9721.jpg" />
           <p className="aboutMe">
-            Having moved from Hawaii, I've come to see the amazing world of tech that lives here in the Bay area. My passion lives in full stack with a focus on UX/UI. The user experience is what our community sees and feels, but the functionality is what drives us.
+            Having moved from Hawaii, I've come to see the amazing world of tech that lives here in the Bay area. My passion lives in full stack with a focus on UX/UI. The user experience is what our community sees and feels, but the functionality is what drives us. 
           </p>
           <blockquote className="blockquote">
             "People ignore design that ignores people." - <b>Frank Chimero</b>
