@@ -66,6 +66,14 @@ p .aboutMe {
   margin: 0 auto;
 }
 
+a.navbar-brand {
+  padding-left: 4px;
+}
+
+button.navbar-toggler.second-button {
+  padding: 8px;
+}
+
 #root {
   background-color: #4b515d;
   background: url('./After.JPG');
