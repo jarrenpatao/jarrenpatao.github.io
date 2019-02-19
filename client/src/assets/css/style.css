@@ -67,11 +67,11 @@ p .aboutMe {
 }
 
 a.navbar-brand {
-  padding-left: 4px;
+  padding-left: 6px;
 }
 
 button.navbar-toggler.second-button {
-  padding: 8px;
+  padding: 6px;
 }
 
 #root {
