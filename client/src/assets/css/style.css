@@ -20,7 +20,7 @@ h1,h2{
 }
 
 h3 {
-  color: rgb(78, 78, 78);
+  color: #fff;
 }
 
 h2 .paraText{
@@ -102,7 +102,6 @@ button.navbar-toggler.second-button {
 
 #root p {
   color: #000;
-  
 }
 
 
