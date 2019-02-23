@@ -1,18 +1,19 @@
 import { MDBBtn, MDBInput, MDBIcon, MDBContainer, MDBRow, MDBCol } from "mdbreact";
 import React from "react";
+import NavTabs from "../../NavTabs";
 
 
 function Contact() {
   return (
-    
     <MDBContainer>
+    <NavTabs />
     <hr />
       <div>
       <MDBRow className="my-5">
           <MDBCol>
             <form action="https://formspree.io/jarrenpatao@gmail.com" method="POST">
               <p className="h5 text-center mb-4">Contact me here!</p>
-              <div className="grey-text">
+              <div className="black-text">
                 <MDBInput
                   label="Your name"
                   icon="user"

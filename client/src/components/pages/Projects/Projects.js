@@ -1,12 +1,14 @@
 import { MDBBtn, MDBContainer, MDBRow, MDBCol, MDBCard, MDBCardBody, MDBCardImage, MDBCardText, MDBCardTitle} from "mdbreact";
 import React from "react";
 import "../../../assets/css/style.css"
+import NavTabs from "../../NavTabs";
 
 
 function Projects() {
   return (
     
     <MDBContainer>
+    <NavTabs />
     <hr />
     
       <MDBContainer>
@@ -78,6 +80,25 @@ function Projects() {
           {/* GitHub */}
           <MDBCol md-6>
             <h3>Personal Projects</h3>
+            <hr />
+            <MDBCard>
+              <MDBCardImage
+                src="https://i.imgur.com/ebx84T0.jpg"
+                alt="Legends : Aria"
+                top
+                hover
+                overlay="white-slight"
+              />
+              <MDBCardBody>
+                <MDBCardTitle tag="h5">Legends : Aria - JavaScript RPG Game</MDBCardTitle>
+                <MDBCardText>
+                  This is a passion project of mine where you can play the start of a game that I am currently developing in my off times. It shows a depth of complex job system with 60+ classes programmed. This project is still under development and will be made available for free when I am completed. To run this locally you can download the game and run it with the http-server node module.
+                </MDBCardText>
+                <MDBBtn color="white" size="md">
+                  <a href="https://www.github.com/jarrenpatao/Aria">Source Code</a>
+                </MDBBtn>
+              </MDBCardBody>
+            </MDBCard>
             <hr />
             <MDBCard>
             <MDBCardImage
