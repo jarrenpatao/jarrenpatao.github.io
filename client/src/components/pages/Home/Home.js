@@ -5,7 +5,6 @@ import React from "react";
 // ---------------------------------- Navi ---------------------------------------
 import NavTabs from "../../NavTabs";
 // ------------------------------ Frills ------------------------------
-import { ParallaxBanner } from 'react-scroll-parallax';
 // import { Parallax } from "react-parallax";
 import "../../../assets/css/style.css";
 
@@ -15,23 +14,6 @@ function Home() {
   return (
     
     <div>
-    <ParallaxBanner
-      className="your-class"
-      layers={[{
-        image: 'https://i.imgur.com/JhXaId2.jpg',
-        amount: 0.1,
-        slowerScrollRate: false,
-      },
-      {
-        image: 'https://i.imgur.com/JhXaId2.jpg',
-        amount: 0.2,
-        slowerScrollRate: false,
-      },]}
-      style={{
-          height: '500px',
-      }}
-      >
-    </ParallaxBanner>
     <NavTabs />
     <MDBContainer>
       <MDBRow>

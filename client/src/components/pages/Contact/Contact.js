@@ -5,10 +5,11 @@ import NavTabs from "../../NavTabs";
 
 function Contact() {
   return (
-    <MDBContainer>
+    <div>
     <NavTabs />
+    <MDBContainer>
     <hr />
-      <div>
+      <div className="contactBack">
       <MDBRow className="my-5">
           <MDBCol>
             <form action="https://formspree.io/jarrenpatao@gmail.com" method="POST">
@@ -64,7 +65,9 @@ function Contact() {
           </MDBCol>
         </MDBRow>
       </div>
+      <hr /><br />
     </MDBContainer>
+    </div>
   );
 }
 export default Contact;

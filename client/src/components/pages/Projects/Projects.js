@@ -6,11 +6,9 @@ import NavTabs from "../../NavTabs";
 
 function Projects() {
   return (
-    
-    <MDBContainer>
+    <div>
     <NavTabs />
     <hr />
-    
       <MDBContainer>
         <MDBRow>
           <MDBCol>
@@ -75,6 +73,7 @@ function Projects() {
               </MDBBtn>
             </MDBCardBody>
           </MDBCard>
+          <hr />
           </MDBCol>
 
           {/* GitHub */}
@@ -140,8 +139,9 @@ function Projects() {
           </MDBCard>
           </MDBCol>
         </MDBRow>
+        <hr /><br />
       </MDBContainer>
-    </MDBContainer>
+    </div>
   );
 }
 export default Projects;

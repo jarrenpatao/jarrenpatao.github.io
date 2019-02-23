@@ -2,9 +2,28 @@ import React from "react";
 // import { Link } from "react-router-dom";
 // import { MDBNavbar, MDBNavbarBrand, MDBNavbarNav, MDBNavItem, MDBNavLink, MDBFormInline, MDBDropdown, MDBDropdownToggle, MDBDropdownMenu,  MDBDropdownItem, MDBContainer, MDBIcon } from "mdbreact";
 import "../assets/css/style.css";
+import { ParallaxBanner } from 'react-scroll-parallax';
 
 function NavTabs() {
   return (
+    <div>
+    <ParallaxBanner
+      className="your-class"
+      layers={[{
+        image: 'https://i.imgur.com/JhXaId2.jpg',
+        amount: 0.1,
+        slowerScrollRate: false,
+      },
+      {
+        image: 'https://i.imgur.com/JhXaId2.jpg',
+        amount: 0.2,
+        slowerScrollRate: false,
+      },]}
+      style={{
+          height: '500px',
+      }}
+      >
+    </ParallaxBanner>
     <nav className="navbar navbar-dark stylish-color mb-4">
 
       {/* <!-- Navbar brand --> */}
@@ -36,6 +55,7 @@ function NavTabs() {
         </ul>
       </div>
     </nav>
+    </div>
   );
 }
 
