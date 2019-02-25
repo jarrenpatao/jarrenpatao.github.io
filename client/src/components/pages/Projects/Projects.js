@@ -14,6 +14,70 @@ function Projects() {
           <MDBCol>
             <h3>Deployed Co-op Projects</h3>
             <hr />
+            {/* Project 3 : Fullstack-Network */}
+            <MDBCard>
+              <MDBCardImage
+                src="http://i103.photobucket.com/albums/m130/minibalogna00/FSN_1.png"
+                alt="Fullstack-Network | Hosted by Heroku"
+                top
+                hover
+                overlay="white-slight"
+              />
+              <MDBCardBody color="dark">
+                <MDBCardTitle tag="h5">Fullstack-Network</MDBCardTitle>
+                <MDBCardText>
+                Fullstack-Network was created by <a href="https://www.github.com/orionabrams">Orion</a>, <a href="https://www.github.com/jkawahara">John</a>, <a href="https://www.github.com/Momo0532">Jason</a>, and <a href="https://www.github.com/jarrenpatao">myself</a> to help organize a set of lessons prevalent to boot camps.
+                <hr />
+                  Main technologies used to create Fullstack-Network were:<br />
+                  <ul>
+                    <li>React.js</li>
+                    <li>Express.js</li>
+                    <li>SQL/MySQL</li>
+                    <li>Material Design for Bootstrap / MDBReact</li>
+                    <li>JavaScript</li>
+                    <li>Node.js</li>
+                    <li>Passport</li>
+                    <li>MVC Framework</li>
+                    <li>Chart.js</li>
+                  </ul>
+                </MDBCardText>
+                <MDBBtn color="white" size="md">
+                  <a href="https://fullstack-network.herokuapp.com/">Coordinate Lessons</a>
+                </MDBBtn>
+              </MDBCardBody>
+            </MDBCard>
+            <hr />
+            {/* Project 2 : Bill¥ */}
+            <MDBCard>
+              <MDBCardImage
+                src="https://i103.photobucket.com/albums/m130/minibalogna00/BSS.png"
+                alt="Bill¥: Payment Assistant | Hosted by Heroku"
+                top
+                hover
+                overlay="white-slight"
+              />
+              <MDBCardBody>
+                <MDBCardTitle tag="h5">Bill¥: Payment Assistant</MDBCardTitle>
+                <MDBCardText>
+                  Bill¥ is a web application built with a unified bill system in mind. This project is still a work in progress. Created with <a href="https://github.com/Hellsrevenge/">Varvara</a> and <a href="https://github.com/mpoblete27/">Mickey</a>.
+                  <hr />
+                  Main technologies used to create Bill¥ were:<br />
+                  <ul>
+                    <li>SQL/MySQL</li>
+                    <li>Sequelize</li>
+                    <li>Server Migrations</li>
+                    <li>JavaScript</li>
+                    <li>Node.js</li>
+                    <li>Passport</li>
+                    <li>Travis</li>
+                  </ul>
+                </MDBCardText>
+                <MDBBtn color="white" size="md">
+                  <a href="https://billy2019.herokuapp.com">Track Some Bills</a>
+                </MDBBtn>
+              </MDBCardBody>
+            </MDBCard>
+            <hr />
             {/* Project 1 : Rupert */}
             <MDBCard>
             <MDBCardImage
@@ -27,49 +91,19 @@ function Projects() {
               <MDBCardTitle tag="h5">Rupert: Movie Companion</MDBCardTitle>
               <MDBCardText>
                 Rupert was created by <a href="https://www.github.com/orionabrams">Orion</a>, <a href="https://www.github.com/amandamurillo">Amanda</a>, <a href="https://www.github.com/zimanzm">Ziman</a>, and <a href="https://www.github.com/jarrenpatao">myself</a> to help find top movies that you might be looking for.
+                <hr />
+                Main technologies used to create Rupert were:<br />
+                <ul>
+                  <li>Firebase</li>
+                  <li>HTML</li>
+                  <li>CSS</li>
+                  <li>JavaScript</li>
+                  <li>Twitter Bootstrap</li>
+                  <li>API</li>
+                </ul>
               </MDBCardText>
               <MDBBtn color="white" size="md">
                 <a href="https://rupert-movie-companion.herokuapp.com/">Go Ask Rupert</a>
-              </MDBBtn>
-            </MDBCardBody>
-          </MDBCard>
-          <hr />
-          {/* Project 2 : Bill¥ */}
-          <MDBCard>
-            <MDBCardImage
-              src="https://i103.photobucket.com/albums/m130/minibalogna00/BSS.png"
-              alt="Bill¥: Payment Assistant | Hosted by Heroku"
-              top
-              hover
-              overlay="white-slight"
-            />
-            <MDBCardBody>
-              <MDBCardTitle tag="h5">Bill¥: Payment Assistant</MDBCardTitle>
-              <MDBCardText>
-                Bill¥ is a web application built with a unified bill system in mind. This project is still a work in progress. Created with <a href="https://github.com/Hellsrevenge/">Varvara</a> and <a href="https://github.com/mpoblete27/">Mickey</a>.
-              </MDBCardText>
-              <MDBBtn color="white" size="md">
-                <a href="https://billy2019.herokuapp.com">Track Some Bills</a>
-              </MDBBtn>
-            </MDBCardBody>
-          </MDBCard>
-          <hr />
-          {/* Project 3 : Fullstack-Network */}
-          <MDBCard>
-            <MDBCardImage
-              src="http://i103.photobucket.com/albums/m130/minibalogna00/FSN_1.png"
-              alt="Fullstack-Network | Hosted by Heroku"
-              top
-              hover
-              overlay="white-slight"
-            />
-            <MDBCardBody color="dark">
-              <MDBCardTitle tag="h5">Fullstack-Network</MDBCardTitle>
-              <MDBCardText>
-              Fullstack-Network was created by <a href="https://www.github.com/orionabrams">Orion</a>, <a href="https://www.github.com/jkawahara">John</a>, <a href="https://www.github.com/Momo0532">Jason</a>, and <a href="https://www.github.com/jarrenpatao">myself</a> to help organize a set of lessons prevalent to boot camps.
-              </MDBCardText>
-              <MDBBtn color="white" size="md">
-                <a href="https://fullstack-network.herokuapp.com/">Coordinate Lessons</a>
               </MDBBtn>
             </MDBCardBody>
           </MDBCard>
