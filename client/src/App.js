@@ -1,23 +1,27 @@
 import React from "react";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import { ParallaxProvider } from "react-scroll-parallax";
-import Home from "./components/pages/Home/Home";
-import Contact from "./components/pages/Contact/Contact";
-import Projects from "./components/pages/Projects/Projects";
-import NoMatch from "./components/pages/NoMatch/NoMatch";
+import Home from "./pages/Home/Home";
+import Contact from "./pages/Contact/Contact";
+import Projects from "./pages/Projects/Projects";
+import Blogs from "./pages/Blogs/Blogs";
+import Detail from "./pages/Detail/Detail";
+import NoMatch from "./pages/NoMatch/NoMatch";
 import "./assets/css/style.css";
 
 function App() {
   return (
     <Router>
       <ParallaxProvider>
-          <Switch>
+        <Switch>
           <Route exact path="/" component={Home} />
           <Route exact path="/about" component={Home} />
           <Route exact path="/contact" component={Contact} />
-          <Route path="/projects" component={Projects} />
+          <Route exact path="/projects" component={Projects} />
+          <Route exact path="/blogs" component={Blogs} />
+          <Route exact path="/blogs/:id" component={Detail} />
           <Route component={NoMatch} />
-          </Switch>
+        </Switch>
       </ParallaxProvider>
     </Router>
   );
