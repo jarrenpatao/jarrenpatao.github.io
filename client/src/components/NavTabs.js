@@ -16,11 +16,12 @@ function NavTabs() {
       },
       {
         image: 'https://i.imgur.com/JhXaId2.jpg',
-        amount: 0.2,
+        amount: 0.5,
         slowerScrollRate: false,
       },]}
       style={{
-          height: '500px',
+          height: '300px',
+          width: '100%',
       }}
       >
     </ParallaxBanner>

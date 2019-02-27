@@ -23,6 +23,11 @@ h3 {
   color: #fff;
 }
 
+h4 {
+  padding-top: 100px;
+  text-align: center;
+}
+
 h2 .paraText{
   text-align: center;
   margin-top: 100px;
@@ -93,9 +98,14 @@ button.navbar-toggler.second-button {
   margin: 0 auto;
 }
 
+.spacer {
+  background-color: #fff;
+  height: 15px;
+}
+
 #root {
   background-color: #4b515d;
-  background: url('./After.JPG');
+  background: url('https://i.imgur.com/7qTrZb1.jpg');
   background-repeat: repeat-y;
   font-family: 'Raleway', sans-serif;
 }

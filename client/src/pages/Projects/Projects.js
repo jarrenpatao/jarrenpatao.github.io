@@ -12,7 +12,7 @@ function Projects() {
       <MDBContainer>
         <MDBRow>
           <MDBCol>
-            <h3>Deployed Co-op Projects</h3>
+            <h3>Deployed Collaborative Projects</h3>
             <hr />
             {/* Project 3 : Fullstack-Network */}
             <MDBCard>
@@ -26,7 +26,7 @@ function Projects() {
               <MDBCardBody color="dark">
                 <MDBCardTitle tag="h5">Fullstack-Network</MDBCardTitle>
                 <MDBCardText>
-                Fullstack-Network was created by <a href="https://www.github.com/orionabrams">Orion</a>, <a href="https://www.github.com/jkawahara">John</a>, <a href="https://www.github.com/Momo0532">Jason</a>, and <a href="https://www.github.com/jarrenpatao">myself</a> to help organize a set of lessons prevalent to boot camps.
+                Fullstack-Network was created by <a href="https://www.github.com/orionabrams" target="_blank" rel="noopener noreferrer">Orion</a>, <a href="https://www.github.com/jkawahara" target="_blank" rel="noopener noreferrer">John</a>, <a href="https://www.github.com/Momo0532" target="_blank" rel="noopener noreferrer">Jason</a>, and <a href="https://www.github.com/jarrenpatao" target="_blank" rel="noopener noreferrer">myself</a> to help organize a set of lessons prevalent to boot camps.
                 <hr />
                   Main technologies used to create Fullstack-Network were:<br />
                   <ul>
@@ -42,7 +42,7 @@ function Projects() {
                   </ul>
                 </MDBCardText>
                 <MDBBtn color="white" size="md">
-                  <a href="https://fullstack-network.herokuapp.com/">Coordinate Lessons</a>
+                  <a href="https://fullstack-network.herokuapp.com/" target="_blank" rel="noopener noreferrer">Coordinate Lessons</a>
                 </MDBBtn>
               </MDBCardBody>
             </MDBCard>
@@ -59,7 +59,7 @@ function Projects() {
               <MDBCardBody>
                 <MDBCardTitle tag="h5">Bill¥: Payment Assistant</MDBCardTitle>
                 <MDBCardText>
-                  Bill¥ is a web application built with a unified bill system in mind. This project is still a work in progress. Created with <a href="https://github.com/Hellsrevenge/">Varvara</a> and <a href="https://github.com/mpoblete27/">Mickey</a>.
+                  Bill¥ is a web application built with a unified bill system in mind. This project is still a work in progress. Created with <a href="https://github.com/Hellsrevenge/" target="_blank" rel="noopener noreferrer">Varvara</a> and <a href="https://github.com/mpoblete27/" target="_blank" rel="noopener noreferrer">Mickey</a>.
                   <hr />
                   Main technologies used to create Bill¥ were:<br />
                   <ul>
@@ -73,7 +73,7 @@ function Projects() {
                   </ul>
                 </MDBCardText>
                 <MDBBtn color="white" size="md">
-                  <a href="https://billy2019.herokuapp.com">Track Some Bills</a>
+                  <a href="https://billy2019.herokuapp.com" target="_blank" rel="noopener noreferrer">Track Some Bills</a>
                 </MDBBtn>
               </MDBCardBody>
             </MDBCard>
@@ -90,7 +90,7 @@ function Projects() {
             <MDBCardBody color="dark">
               <MDBCardTitle tag="h5">Rupert: Movie Companion</MDBCardTitle>
               <MDBCardText>
-                Rupert was created by <a href="https://www.github.com/orionabrams">Orion</a>, <a href="https://www.github.com/amandamurillo">Amanda</a>, <a href="https://www.github.com/zimanzm">Ziman</a>, and <a href="https://www.github.com/jarrenpatao">myself</a> to help find top movies that you might be looking for.
+                Rupert was created by <a href="https://www.github.com/orionabrams" target="_blank" rel="noopener noreferrer">Orion</a>, <a href="https://www.github.com/amandamurillo" target="_blank" rel="noopener noreferrer">Amanda</a>, <a href="https://www.github.com/zimanzm" target="_blank" rel="noopener noreferrer">Ziman</a>, and <a href="https://www.github.com/jarrenpatao" target="_blank" rel="noopener noreferrer">myself</a> to help find top movies that you might be looking for.
                 <hr />
                 Main technologies used to create Rupert were:<br />
                 <ul>
@@ -103,7 +103,7 @@ function Projects() {
                 </ul>
               </MDBCardText>
               <MDBBtn color="white" size="md">
-                <a href="https://rupert-movie-companion.herokuapp.com/">Go Ask Rupert</a>
+                <a href="https://rupert-movie-companion.herokuapp.com/" target="_blank" rel="noopener noreferrer">Go Ask Rupert</a>
               </MDBBtn>
             </MDBCardBody>
           </MDBCard>
