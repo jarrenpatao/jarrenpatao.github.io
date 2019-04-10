@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css?family=IBM+Plex+Sans:100,100i|Petit+Formal+Script|Prata|Press+Start+2P');
 @import url('https://fonts.googleapis.com/css?family=Raleway');
+@import url('https://fonts.googleapis.com/css?family=Major+Mono+Display');
 
 /* -------- Font Familites -------- */
 /* 
@@ -57,6 +58,10 @@ button.navbar-toggler.second-button {
   padding: 6px;
 }
 
+.msf {
+  font-family: 'Major Mono Display', monospace; 
+}
+
 .AnimName {
   text-align: center;
   display: grid;
@@ -104,10 +109,21 @@ button.navbar-toggler.second-button {
   /* max-width: 100%; */
 }
 
+.aboutMe {
+  color: #0a4658;
+  margin: 10px;
+  float: left;
+}
+
 .aboutMeBody {
   background-color: rgba(255, 255, 255, 0.5);
   border-radius: 50px;
   padding: 15px;
+}
+
+.amc {
+  background-color: #fff;
+  padding: 10px;
 }
 
 .contactBack {
@@ -127,12 +143,8 @@ button.navbar-toggler.second-button {
 
 .spacer {
   background-color: #fff;
-  height: 15px;
-}
-
-.amc {
-  background-color: #fff;
-  padding: 10px;
+  height: 30px;
+  padding-top: 5vh;
 }
 
 .bt {
@@ -157,11 +169,20 @@ button.navbar-toggler.second-button {
   font-family: 'Raleway', sans-serif;
 }
 
-.aboutMe {
-  color: #0a4658;
-  margin: 10px;
-  float: left;
+#secTwo {
+  font-family: 'Major Mono Display', monospace;
+  font-size: 50px;
+  text-align: center;
 }
+
+
+
+
+
+/* --------------------------------------------------------------- */
+
+
+
 
 
 /* Icon 1 */
