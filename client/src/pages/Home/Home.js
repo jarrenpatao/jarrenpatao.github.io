@@ -44,20 +44,16 @@ function Home() {
           <MDBRow className="aboutMeBody">
             <img className="profPic" alt="Cheers!" src="http://i103.photobucket.com/albums/m130/minibalogna00/6W7Y9721.jpg" />
             <p className="aboutMe floatleft">
-              Having moved from Hawaii, I've come to see the amazing world of tech that lives here in the Bay area. I design My passion lives in full stack with a focus on front-end web development. 
+              Aloha! Having moved from Hawaii, I've come to see the amazing world of tech that lives here in the Bay area. I design My passion lives in full stack with a focus on front-end web development. Primary tech stack used - MongoDB/SQL, express.js (Web Server), React.js, Node.js.
             </p>
-            <blockquote className="blockquote">
-              "People ignore design that ignores people." - <b>Frank Chimero</b>
-            </blockquote>
-            <p className="aboutMe">
-              Full Stack Developer - MongoDB/SQL, express.js (Web Server), React.js, Node.js.
-            </p>
-              <br />
             <div className="floatLeft">
               <p className="aboutMe">  
                 Other technologies I've used are <i>HTML5/CSS3, SCSS, Javascript, jQuery, APIs, Twitter Bootstrap, Handlebars, MobX, React Native, Expo, Firebase, SQL/MySQL, Sequelize, and MVC</i> 
               </p>
             </div>
+            <blockquote className="blockquote">
+              "People ignore design that ignores people." - <b>Frank Chimero</b>
+            </blockquote>
           </MDBRow>
         </MDBCol>
       </MDBRow>

@@ -40,6 +40,10 @@ p {
   color: #0b1d6d;
 }
 
+.aboutMeBody p {
+  float: left;
+}
+
 label {
   color: #000;
 }
@@ -63,7 +67,9 @@ button.navbar-toggler.second-button {
 
 .profPic {
   margin: 0 auto;
-  margin: 30 28% 100 30;
+  margin: 30px;
+  margin-left: 18vw;
+  margin-right: 18vw;
   width: 50%;
   height: 50%;
   border-radius: 45px;
