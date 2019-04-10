@@ -12,7 +12,7 @@ function Projects() {
       <MDBContainer>
         <MDBRow>
           <MDBCol>
-            <h3>Deployed Collaborative Projects</h3>
+            <h3 className="projTitle">Deployed Collaborative Projects</h3>
             <hr />
             {/* Project 3 : Fullstack-Network */}
             <MDBCard>
@@ -25,7 +25,7 @@ function Projects() {
               />
               <MDBCardBody color="dark">
                 <MDBCardTitle tag="h5">Fullstack-Network</MDBCardTitle>
-                <MDBCardText>
+                <MDBCardText className="bt">
                 Fullstack-Network was created by <a href="https://www.github.com/orionabrams" target="_blank" rel="noopener noreferrer">Orion</a>, <a href="https://www.github.com/jkawahara" target="_blank" rel="noopener noreferrer">John</a>, <a href="https://www.github.com/Momo0532" target="_blank" rel="noopener noreferrer">Jason</a>, and <a href="https://www.github.com/jarrenpatao" target="_blank" rel="noopener noreferrer">myself</a> to help organize a set of lessons prevalent to boot camps.
                 <hr />
                   Main technologies used to create Fullstack-Network were:<br />
@@ -112,7 +112,7 @@ function Projects() {
 
           {/* GitHub */}
           <MDBCol md-6>
-            <h3>Personal Projects</h3>
+            <h3 className="projTitle">Personal Projects</h3>
             <hr />
             <MDBCard>
               <MDBCardImage
@@ -125,7 +125,9 @@ function Projects() {
               <MDBCardBody>
                 <MDBCardTitle tag="h5">Legends : Aria - JavaScript RPG Game</MDBCardTitle>
                 <MDBCardText>
-                  This is a passion project of mine where you can play the start of a game that I am currently developing in my off times. It shows a depth of complex job system with 60+ classes programmed. This project is still under development and will be made available for free when I am completed. To run this locally you can download the game and run it with the http-server node module.
+                  This is a passion project of mine where you can play the start of a game that I am currently developing in my off times. It shows a depth of complex job system with 60+ classes programmed. This project is still under development and will be made available for free when I am completed. To run this locally you can download the game and run it with the http-server node module.<br />
+                  -<br />
+                  Currently I am working primarily on the story and will continue to edit the game when I feel as if the story has good development.
                 </MDBCardText>
                 <MDBBtn color="white" size="md">
                   <a href="https://www.github.com/jarrenpatao/Aria">Source Code</a>

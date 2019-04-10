@@ -20,7 +20,8 @@ h1,h2{
 }
 
 h3 {
-  color: #fff;
+  color: inherit;
+  color: #0b1d6d;
 }
 
 h4 {
@@ -32,11 +33,11 @@ h2 .paraText{
   text-align: center;
   margin-top: 100px;
   font-weight: 700;
-  color: #fff;
+  color: #1186aa;
 }
 
-p .aboutMe {
-  color: #eee;
+p {
+  color: #0b1d6d;
 }
 
 label {
@@ -45,18 +46,27 @@ label {
 
 a.navbar-brand {
   padding-left: 6px;
+  color: #0b1d6d;
 }
 
 button.navbar-toggler.second-button {
   padding: 6px;
 }
 
+.AnimName {
+  text-align: center;
+  display: grid;
+  place-items: center;
+  min-height: 100vh;
+  padding: 0 10px;
+}
+
 .profPic {
-  margin-right: 15px;
-  margin-bottom: 5px;
-  max-width: 40%;
-  border-radius: 15px;
-  float: left;
+  margin: 0 auto;
+  margin: 30 28% 100 30;
+  width: 50%;
+  height: 50%;
+  border-radius: 45px;
 }
 
 .my-5 {
@@ -71,17 +81,27 @@ button.navbar-toggler.second-button {
   margin-bottom: 25px;
 }
 
+.projTitle {
+  color: #fff;
+}
+
+.subTitle {
+  color: #f3e5f5;
+  font-size: 30px;
+}
+
 .blockquote {
   font-family: 'Raleway', sans-serif;
   text-align: center;
-  color: #fff;
+  color: #021847;
+  margin-left: 50px;
   /* max-width: 100%; */
 }
 
-.splash {
-  max-height: 100vh;
-  max-width: 100vw;
-  text-align: center;
+.aboutMeBody {
+  background-color: rgba(255, 255, 255, 0.5);
+  border-radius: 50px;
+  padding: 15px;
 }
 
 .contactBack {
@@ -94,6 +114,7 @@ button.navbar-toggler.second-button {
 }
 
 .floatleft {
+  position: relative;
   float: left;
   margin: 0 auto;
 }
@@ -103,15 +124,37 @@ button.navbar-toggler.second-button {
   height: 15px;
 }
 
+.amc {
+  background-color: #fff;
+  padding: 10px;
+}
+
+.bt {
+  color: #000;
+}
+
+.an {
+  margin: 0 auto;
+  margin-top: 19vh;
+}
+
+#uifp {
+  margin: 0 auto;
+  margin-bottom: 19vh;
+  max-height: 30vh;
+}
+
 #root {
   background-color: #4b515d;
-  background: url('https://i.imgur.com/7qTrZb1.jpg');
+  background: url("./IMG_9907.JPG");
   background-repeat: repeat-y;
   font-family: 'Raleway', sans-serif;
 }
 
-#root p {
-  color: #000;
+.aboutMe {
+  color: #0a4658;
+  margin: 10px;
+  float: left;
 }
 
 
