@@ -62,7 +62,7 @@ function Home() {
 
 
     </MDBContainer>
-      
+    {/*  
       <div className="spacer">
         <h3 id="secTwo">coding ideals</h3>
       </div>
@@ -77,15 +77,15 @@ function Home() {
           "margin": inPad
         }}>
           <MDBCol md="4">
-            {/* Card */}
+            Card
             <div className="card card-cascade narrower">
-              {/* Card image */}
+              Card image
               <div className="view view-cascade overlay">
                 <img className="card-img-top" src={cardOne} alt="Card cap" />
                 <div className="mask rgba-white-slight"></div>
               </div>
 
-              {/* Card content */}
+              Card content
               <div className="card-body card-body-cascade">
                 <h5 className="blue-text pb-2 pt-1 msf">
                   <i className="fas fa-search"></i> focus
@@ -98,15 +98,15 @@ function Home() {
           </MDBCol>
 
           <MDBCol md="4">
-            {/* Card */}
+            Card
             <div className="card card-cascade narrower">
-              {/* Card image */}
+              Card image
               <div className="view view-cascade overlay">
                 <img className="card-img-top" src={cardTwo} alt="Card cap" />
                 <div className="mask rgba-white-slight"></div>
               </div>
 
-              {/* Card content */}
+              Card content
               <div className="card-body card-body-cascade">
                 <h5 className="blue-text pb-2 pt-1 msf">
                   <i className="fas fa-balance-scale"></i> balance
@@ -119,15 +119,15 @@ function Home() {
           </MDBCol>
 
           <MDBCol md="4">
-            {/* Card */}
+            Card
             <div className="card card-cascade narrower">
-              {/* Card image */}
+              Card image
               <div className="view view-cascade overlay">
                 <img className="card-img-top" src={cardThree} alt="Card cap" />
                 <div className="mask rgba-white-slight"></div>
               </div>
 
-              {/* Card content */}
+              Card content
               <div className="card-body card-body-cascade">
                 <h5 className="blue-text pb-2 pt-1 msf">
                   <i className="fas fa-object-group"></i> arrangement
@@ -140,7 +140,7 @@ function Home() {
           </MDBCol>
         </MDBRow>
       </div>
-      {/*<ParallaxBanner
+      <ParallaxBanner
         layers={[
           {
             image: paraOne,
