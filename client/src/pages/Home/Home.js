@@ -4,7 +4,8 @@ import { MDBContainer, MDBRow, MDBCol, Jumbotron } from "mdbreact";
 import { ParallaxBanner } from "react-scroll-parallax";
 // ---------------------------------- Navi ---------------------------------------
 import NavTabs from "../../components/NavTabs";
-import AnimName from "../../components/AnimName/AnimName.js"
+import AnimName from "../../components/AnimName/AnimName";
+import ScrollButton from "../../components/ScrollButton/ScrollButton";
 // ------------------------------ Frills ------------------------------
 import "../../assets/css/style.css";
 import userIcon from "./userIcon.svg";
@@ -16,6 +17,33 @@ import cardThree from "./IMG_0210.JPG";
 
 function Home() {
 
+  const footerStyle = {
+    fontSize: "20px",
+    textAlign: "right",
+    padding: "20px",
+    position: "fixed",
+    left: "0",
+    bottom: "0",
+    height: "60px",
+    width: "100%"
+  };
+  
+  const phantomStyle = {
+    display: "block",
+    padding: "20px",
+    height: "60px",
+    width: "100%"
+  };
+  
+  function Footer({ children }) {
+    return (
+      <div>
+        <div style={phantomStyle} />
+        <div style={footerStyle}>{children}</div>
+      </div>
+    );
+  }
+  
   var inPad = 50;
   return (
     
@@ -62,6 +90,12 @@ function Home() {
 
 
     </MDBContainer>
+    <div className="sbs">
+      <ScrollButton 
+        delayInMs="16.66"
+        scrollStepInPx="50"
+      />
+    </div>
     {/*  
       <div className="spacer">
         <h3 id="secTwo">coding ideals</h3>

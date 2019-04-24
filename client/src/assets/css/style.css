@@ -175,7 +175,13 @@ button.navbar-toggler.second-button {
   text-align: center;
 }
 
-
+.sbs {
+  margin: 0 auto;
+  font-size: 40px;
+  width: 100vw;
+  color: #000;
+  border: none;
+}
 
 
 
