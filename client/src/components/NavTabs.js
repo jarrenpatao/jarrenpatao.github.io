@@ -28,9 +28,9 @@ function NavTabs() {
             <li className="nav-item">
               <a className="nav-link" href="/contact">Contact</a>
             </li>
-            <li className="nav-item">
+            {/* <li className="nav-item">
               <a className="nav-link" href="/projects">Projects</a>
-            </li>
+            </li> */}
             <li className="nav-item">
               <a className="nav-link" target="_blank" rel="noopener noreferrer" href="https://sleepy-refuge-79306.herokuapp.com/">Passion Project - Aria : RPG</a>
             </li>

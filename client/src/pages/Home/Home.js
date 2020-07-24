@@ -5,7 +5,7 @@ import { ParallaxBanner } from "react-scroll-parallax";
 // ---------------------------------- Navi ---------------------------------------
 import NavTabs from "../../components/NavTabs";
 import AnimName from "../../components/AnimName/AnimName";
-import ScrollButton from "../../components/ScrollButton/ScrollButton";
+// import ScrollButton from "../../components/ScrollButton/ScrollButton";
 // ------------------------------ Frills ------------------------------
 import "../../assets/css/style.css";
 import userIcon from "./userIcon.svg";
@@ -70,7 +70,6 @@ function Home() {
         <MDBCol sm="1"></MDBCol>
         <MDBCol sm="10">
           <MDBRow className="aboutMeBody">
-            <img className="profPic" alt="Cheers!" src="http://i103.photobucket.com/albums/m130/minibalogna00/6W7Y9721.jpg" />
             <p className="aboutMe floatleft">
               Aloha! Having moved from Hawaii, I've come to see the amazing world of tech that lives here in the Bay area. My passion lives in full stack with a focus on front-end web development. Primary tech stack used - MongoDB/SQL, express.js (Web Server), React.js, Node.js.
             </p>
@@ -86,19 +85,17 @@ function Home() {
         </MDBCol>
       </MDBRow>
       <MDBCol sm="1"></MDBCol>
-      <hr />
-
-
+      <MDBRow className="topParallaxSpacer"></MDBRow>
     </MDBContainer>
-    <div className="sbs">
+    {/* <div className="sbs">
       <ScrollButton 
         delayInMs="16.66"
         scrollStepInPx="50"
       />
-    </div>
-    {/*  
+    </div> */}
+     
       <div className="spacer">
-        <h3 id="secTwo">coding ideals</h3>
+        <h3 id="secTwo">i also like photography</h3>
       </div>
      
       <div className="amc">
@@ -111,17 +108,13 @@ function Home() {
           "margin": inPad
         }}>
           <MDBCol md="4">
-            Card
             <div className="card card-cascade narrower">
-              Card image
               <div className="view view-cascade overlay">
                 <img className="card-img-top" src={cardOne} alt="Card cap" />
                 <div className="mask rgba-white-slight"></div>
               </div>
-
-              Card content
               <div className="card-body card-body-cascade">
-                <h5 className="blue-text pb-2 pt-1 msf">
+                <h5 className="blue-text pb-2 pt-1 msf" font-weight="600">
                   <i className="fas fa-search"></i> focus
                 </h5>
                 <p className="card-text">
@@ -132,15 +125,11 @@ function Home() {
           </MDBCol>
 
           <MDBCol md="4">
-            Card
             <div className="card card-cascade narrower">
-              Card image
               <div className="view view-cascade overlay">
                 <img className="card-img-top" src={cardTwo} alt="Card cap" />
                 <div className="mask rgba-white-slight"></div>
               </div>
-
-              Card content
               <div className="card-body card-body-cascade">
                 <h5 className="blue-text pb-2 pt-1 msf">
                   <i className="fas fa-balance-scale"></i> balance
@@ -153,15 +142,11 @@ function Home() {
           </MDBCol>
 
           <MDBCol md="4">
-            Card
             <div className="card card-cascade narrower">
-              Card image
               <div className="view view-cascade overlay">
                 <img className="card-img-top" src={cardThree} alt="Card cap" />
                 <div className="mask rgba-white-slight"></div>
               </div>
-
-              Card content
               <div className="card-body card-body-cascade">
                 <h5 className="blue-text pb-2 pt-1 msf">
                   <i className="fas fa-object-group"></i> arrangement
@@ -190,7 +175,7 @@ function Home() {
         }}
       >
         <h1>Banner Children</h1>
-    </ParallaxBanner>*/}
+    </ParallaxBanner>
     </div>
   );
 }

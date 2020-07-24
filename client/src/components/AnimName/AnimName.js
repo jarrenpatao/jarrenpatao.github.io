@@ -11,7 +11,8 @@ function AnimName () {
         overlayColor="#008ab8"
       >
         jarren patao<hr />
-        <p className="subTitle">front-end web developer</p>
+        <p className="subTitle">technical support agent</p>
+        <p className="subSubTitle">casually Artsy guy</p>
       </AnimatedText>
     </div>
   )
