@@ -30,7 +30,7 @@ export default function Nav() {
         <div className="flex items-center justify-between">
           {/* Logo */}
           <a href="#hero" className="font-mono text-sm font-medium text-purple-light tracking-wide">
-            jp<span className="text-pink-DEFAULT">.</span>dev
+            jarren<span className="text-pink-DEFAULT">.</span>dev
           </a>
 
           {/* Desktop links */}
