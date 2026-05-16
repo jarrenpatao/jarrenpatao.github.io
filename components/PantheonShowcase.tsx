@@ -5,6 +5,7 @@ import { useEffect, useRef, useState } from 'react'
 const CHAPTERS = [
   { key: 'overview',  label: 'Overview'  },
   { key: 'odin',      label: 'Odin'      },
+  { key: 'muninn',    label: 'Muninn'    },
   { key: 'sif',       label: 'Sif'       },
   { key: 'vidarr',    label: 'Víðarr'    },
   { key: 'brokkr',    label: 'Brokkr'    },
@@ -61,6 +62,11 @@ function ConstellationGraph() {
       {/* Odin — center */}
       <circle cx="160" cy="70" r="22" fill="rgba(124,58,237,0.12)" stroke="#7c3aed" strokeWidth="1" />
       <text x="160" y="74" textAnchor="middle" fill="white" fontSize="9.5" fontFamily="monospace" fontWeight="bold">ODIN</text>
+
+      {/* Muninn — raven of memory, orbiting close to Odin */}
+      <line x1="160" y1="48" x2="160" y2="22" stroke="#818cf8" strokeWidth="0.75" strokeDasharray="3 2" />
+      <circle cx="160" cy="14" r="12" fill="rgba(99,102,241,0.10)" stroke="#818cf8" strokeWidth="0.75" />
+      <text x="160" y="18" textAnchor="middle" fill="#a5b4fc" fontSize="6.5" fontFamily="monospace">Muninn</text>
 
       {/* Sif — top-left */}
       <circle cx="42"  cy="28"  r="16" fill="rgba(124,58,237,0.08)" stroke="#7c3aed" strokeWidth="0.75" />
@@ -141,6 +147,69 @@ function OdinPanel({ active }: { active: boolean }) {
         <GitHubIcon />
         GitHub
       </a>
+    </Panel>
+  )
+}
+
+function MuninnPanel({ active }: { active: boolean }) {
+  const layers = [
+    {
+      num: '0',
+      name: 'Essence',
+      detail: 'Always-on ~100-token identity string — zero LLM calls, injected into every prompt.',
+      color: 'text-indigo-300',
+      border: 'border-indigo-500/25',
+      bg: 'bg-indigo-500/[0.05]',
+    },
+    {
+      num: '1',
+      name: 'Category Retrieval',
+      detail: 'Vector similarity over category embeddings — surfaces relevant domains, no LLM needed.',
+      color: 'text-violet-300',
+      border: 'border-violet-500/25',
+      bg: 'bg-violet-500/[0.05]',
+    },
+    {
+      num: '2',
+      name: 'Atomic Facts',
+      detail: 'Top-k semantic search over 156 individual facts. Only fires when Layer 1 triggers.',
+      color: 'text-purple-300',
+      border: 'border-purple-500/25',
+      bg: 'bg-purple-500/[0.05]',
+    },
+  ]
+
+  return (
+    <Panel active={active}>
+      <ChapterTag>Muninn · Memory Layer</ChapterTag>
+      <h4 className="text-3xl font-bold text-white leading-tight mb-2">
+        What Odin<br />
+        <span className="text-indigo-400">remembers.</span>
+      </h4>
+      <p className="text-[13px] text-white/35 leading-relaxed max-w-[50ch] mb-6">
+        A three-layer vector memory system. Each request pulls only the context it needs — from a 100-token essence to atomic facts retrieved by cosine similarity. Embeddings are compressed 4× with TurboQuant (Google Research, ICLR&nbsp;2026) and cached for sub-millisecond repeat queries.
+      </p>
+      <div className="space-y-2.5 max-w-[46ch]">
+        {layers.map(({ num, name, detail, color, border, bg }) => (
+          <div key={num} className={`flex items-start gap-3.5 rounded-xl border ${border} ${bg} px-3.5 py-3`}>
+            <div className="w-5 h-5 rounded-full border border-indigo-500/30 bg-indigo-500/[0.07] flex items-center justify-center flex-shrink-0 mt-0.5">
+              <span className="font-mono text-[8px] text-indigo-400/70">{num}</span>
+            </div>
+            <div className="text-[11.5px]">
+              <span className={`font-semibold ${color}`}>{name}</span>
+              <span className="text-white/22 mx-1.5 text-[10px]">—</span>
+              <span className="text-white/28">{detail}</span>
+            </div>
+          </div>
+        ))}
+      </div>
+      <div className="mt-6 flex flex-wrap gap-2">
+        {['SQLite + sqlite-vec', 'Ollama', 'TurboQuant', 'LRU Cache'].map(t => (
+          <span key={t} className="font-mono text-[10px] px-2 py-0.5 rounded border border-white/[0.06] text-white/25 bg-white/[0.02]">
+            {t}
+          </span>
+        ))}
+      </div>
     </Panel>
   )
 }
@@ -357,9 +426,10 @@ export default function PantheonShowcase() {
           <div className="relative flex-1 overflow-hidden">
             <OverviewPanel active={chapter === 0} />
             <OdinPanel     active={chapter === 1} />
-            <SifPanel      active={chapter === 2} />
-            <VidarrPanel   active={chapter === 3} />
-            <BrokkrPanel   active={chapter === 4} />
+            <MuninnPanel   active={chapter === 2} />
+            <SifPanel      active={chapter === 3} />
+            <VidarrPanel   active={chapter === 4} />
+            <BrokkrPanel   active={chapter === 5} />
           </div>
         </div>
       </div>
