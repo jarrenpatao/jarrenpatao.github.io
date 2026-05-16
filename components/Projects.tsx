@@ -1,13 +1,67 @@
 'use client'
 
 import FadeIn from './FadeIn'
-import OdinShowcase from './OdinShowcase'
+import PantheonShowcase from './PantheonShowcase'
 
 function GitHubIcon() {
   return (
     <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
       <path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z" />
     </svg>
+  )
+}
+
+function SifCard() {
+  return (
+    <div className="group flex flex-col bg-surface border border-dim rounded-2xl overflow-hidden hover:border-[var(--border-glow)] hover:-translate-y-1 hover:shadow-[0_16px_48px_rgba(0,0,0,0.5)] transition-all duration-300">
+      <div className="h-32 flex items-center justify-center text-4xl bg-gradient-to-br from-violet-500/20 to-purple-600/10 relative overflow-hidden">
+        <span className="relative z-10 drop-shadow-lg">🍳</span>
+        <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-surface/70" />
+      </div>
+      <div className="flex flex-col flex-1 p-5">
+        <div className="flex items-start justify-between mb-2">
+          <h3 className="text-[13px] font-bold text-white tracking-tight">Sif</h3>
+          <span className="text-[9px] font-mono font-bold text-violet-400 tracking-wider">● Pantheon</span>
+        </div>
+        <p className="text-[12px] text-muted leading-relaxed flex-1 mb-4">
+          Meal planner that asks what&apos;s in your kitchen and returns three real options in under ten seconds. Built for cooking alone with no inspiration.
+        </p>
+        <div className="flex flex-wrap gap-1.5 mb-4">
+          {['React', 'Node / Express', 'Claude API', 'Railway'].map(t => (
+            <span key={t} className="font-mono text-[10px] px-2 py-0.5 rounded border border-dim text-[var(--text-dim)] bg-white/[0.02]">
+              {t}
+            </span>
+          ))}
+        </div>
+      </div>
+    </div>
+  )
+}
+
+function VidarrCard() {
+  return (
+    <div className="group flex flex-col bg-surface border border-dim rounded-2xl overflow-hidden hover:border-[var(--border-glow)] hover:-translate-y-1 hover:shadow-[0_16px_48px_rgba(0,0,0,0.5)] transition-all duration-300">
+      <div className="h-32 flex items-center justify-center text-4xl bg-gradient-to-br from-emerald-500/20 to-teal-600/10 relative overflow-hidden">
+        <span className="relative z-10 drop-shadow-lg">🌿</span>
+        <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-surface/70" />
+      </div>
+      <div className="flex flex-col flex-1 p-5">
+        <div className="flex items-start justify-between mb-2">
+          <h3 className="text-[13px] font-bold text-white tracking-tight">Víðarr</h3>
+          <span className="text-[9px] font-mono font-bold text-violet-400 tracking-wider">● Pantheon</span>
+        </div>
+        <p className="text-[12px] text-muted leading-relaxed flex-1 mb-4">
+          A minimal nightly check-in tracker. Three floors: eat something real, basic hygiene, move your body. No streaks, no judgment — just the baseline.
+        </p>
+        <div className="flex flex-wrap gap-1.5 mb-4">
+          {['React', 'Node / Express', 'Railway'].map(t => (
+            <span key={t} className="font-mono text-[10px] px-2 py-0.5 rounded border border-dim text-[var(--text-dim)] bg-white/[0.02]">
+              {t}
+            </span>
+          ))}
+        </div>
+      </div>
+    </div>
   )
 }
 
@@ -66,9 +120,9 @@ export default function Projects() {
         </div>
       </div>
 
-      {/* Odin — full-width scrollytelling */}
+      {/* Pantheon — full-width scrollytelling */}
       <FadeIn>
-        <OdinShowcase />
+        <PantheonShowcase />
       </FadeIn>
 
       {/* Tools strip */}
@@ -76,9 +130,11 @@ export default function Projects() {
         <div className="max-w-6xl mx-auto">
           <FadeIn>
             <div className="font-mono text-[9px] tracking-[0.3em] text-white/20 uppercase mb-8">
-              Tools &amp; Extensions
+              Also Building
             </div>
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 max-w-lg">
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
+              <SifCard />
+              <VidarrCard />
               <EpochConverterCard />
             </div>
           </FadeIn>
