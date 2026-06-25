@@ -11,6 +11,65 @@ function GitHubIcon() {
   )
 }
 
+function ARIACard() {
+  return (
+    <div className="group flex flex-col bg-surface border border-dim rounded-2xl overflow-hidden hover:border-[var(--border-glow)] hover:-translate-y-1 hover:shadow-[0_16px_48px_rgba(0,0,0,0.5)] transition-all duration-300">
+      <div className="h-32 flex items-center justify-center text-4xl bg-gradient-to-br from-cyan-500/20 to-blue-600/10 relative overflow-hidden">
+        <span className="relative z-10 drop-shadow-lg">🤖</span>
+        <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-surface/70" />
+      </div>
+      <div className="flex flex-col flex-1 p-5">
+        <div className="flex items-start justify-between mb-2">
+          <h3 className="text-[13px] font-bold text-white tracking-tight">ARIA</h3>
+          <span className="text-[9px] font-mono font-bold text-cyan-400 tracking-wider">● In Dev</span>
+        </div>
+        <p className="text-[12px] text-muted leading-relaxed flex-1 mb-4">
+          Amplitude Resolution Intelligence Agent — a conversational multi-tool AI agent built in Superblocks
+          that investigates support tickets across Zendesk, Datadog, Linear, and Confluence autonomously.
+          Compresses 20–40 min of manual research to under 5 min.
+        </p>
+        <div className="flex flex-wrap gap-1.5 mb-4">
+          {['TypeScript', 'React', 'Node.js', 'Superblocks', 'Zendesk', 'Datadog'].map(t => (
+            <span key={t} className="font-mono text-[10px] px-2 py-0.5 rounded border border-dim text-[var(--text-dim)] bg-white/[0.02]">
+              {t}
+            </span>
+          ))}
+        </div>
+      </div>
+    </div>
+  )
+}
+
+function ClaudeSkillsCard() {
+  return (
+    <div className="group flex flex-col bg-surface border border-dim rounded-2xl overflow-hidden hover:border-[var(--border-glow)] hover:-translate-y-1 hover:shadow-[0_16px_48px_rgba(0,0,0,0.5)] transition-all duration-300">
+      <div className="h-32 flex items-center justify-center text-4xl bg-gradient-to-br from-violet-500/20 to-indigo-600/10 relative overflow-hidden">
+        <span className="relative z-10 drop-shadow-lg">⚡</span>
+        <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-surface/70" />
+      </div>
+      <div className="flex flex-col flex-1 p-5">
+        <div className="flex items-start justify-between mb-2">
+          <h3 className="text-[13px] font-bold text-white tracking-tight">Claude Skills</h3>
+          <span className="text-[9px] font-mono font-bold text-emerald-400 tracking-wider">● Shipped</span>
+        </div>
+        <p className="text-[12px] text-muted leading-relaxed flex-1 mb-4">
+          Three Claude Code skills published org-wide:{' '}
+          <span className="font-mono text-white/70">amp-week0-setup</span> (dev env onboarding + troubleshooter),{' '}
+          <span className="font-mono text-white/70">psp-account-context</span> (Slack/Zendesk/Granola → Confluence synthesis),
+          and <span className="font-mono text-white/70">customer-entitlements</span> (Salesforce SOQL entitlement checker).
+        </p>
+        <div className="flex flex-wrap gap-1.5 mb-4">
+          {['Claude API', 'MCP', 'Salesforce', 'Zendesk', 'Confluence'].map(t => (
+            <span key={t} className="font-mono text-[10px] px-2 py-0.5 rounded border border-dim text-[var(--text-dim)] bg-white/[0.02]">
+              {t}
+            </span>
+          ))}
+        </div>
+      </div>
+    </div>
+  )
+}
+
 function SifCard() {
   return (
     <div className="group flex flex-col bg-surface border border-dim rounded-2xl overflow-hidden hover:border-[var(--border-glow)] hover:-translate-y-1 hover:shadow-[0_16px_48px_rgba(0,0,0,0.5)] transition-all duration-300">
@@ -133,6 +192,8 @@ export default function Projects() {
               Also Building
             </div>
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
+              <ARIACard />
+              <ClaudeSkillsCard />
               <SifCard />
               <VidarrCard />
               <EpochConverterCard />
