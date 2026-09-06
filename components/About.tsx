@@ -11,11 +11,11 @@ const stackRows = [
   },
   {
     label: 'AI & Agents',
-    pills: ['Claude API', 'Ollama', 'Google TTS', 'Coqui VITS', 'Web Speech API'],
+    pills: ['Claude API', 'Ollama', 'Kokoro TTS', 'OpenAI TTS', 'Web Speech API', 'sqlite-vec'],
   },
   {
     label: 'Integrations',
-    pills: ['Spotify API', 'Google Calendar', 'Plaid', 'ngrok', 'Vercel'],
+    pills: ['Google Calendar', 'Gmail API', 'Spotify API', 'Sonos', 'APNs', 'Tailscale'],
   },
 ]
 

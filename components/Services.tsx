@@ -1,8 +1,9 @@
 import FadeIn from './FadeIn'
+import { ServiceWebIcon, ServiceAIIcon, ServiceAutomationIcon } from './Icons'
 
 const services = [
   {
-    icon: '🚀',
+    Icon: ServiceWebIcon,
     title: 'Web Apps & Sites',
     desc: 'Full-stack web applications and marketing sites — from landing pages to full SaaS products.',
     items: [
@@ -13,7 +14,7 @@ const services = [
     ],
   },
   {
-    icon: '🤖',
+    Icon: ServiceAIIcon,
     title: 'AI Integrations',
     desc: 'Add AI capabilities to your product or workflow — chatbots, assistants, document analysis, and more.',
     items: [
@@ -24,7 +25,7 @@ const services = [
     ],
   },
   {
-    icon: '⚡',
+    Icon: ServiceAutomationIcon,
     title: 'Automation & Scripts',
     desc: 'Eliminate repetitive work with smart automations, bots, and custom scripts.',
     items: [
@@ -66,8 +67,8 @@ export default function Services() {
                 {/* Top glow line on hover */}
                 <div className="absolute top-0 left-0 right-0 h-0.5 grad-bg opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
 
-                <div className="w-12 h-12 rounded-xl flex items-center justify-center text-2xl mb-5 bg-grad-subtle border border-purple-DEFAULT/20">
-                  {s.icon}
+                <div className="w-12 h-12 rounded-xl flex items-center justify-center mb-5 bg-grad-subtle border border-purple-DEFAULT/20 text-violet-300">
+                  <s.Icon size={24} />
                 </div>
                 <h3 className="text-[17px] font-bold mb-2.5 tracking-tight">{s.title}</h3>
                 <p className="text-sm text-muted leading-[1.7] mb-5">{s.desc}</p>

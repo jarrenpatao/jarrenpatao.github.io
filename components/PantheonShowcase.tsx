@@ -1,27 +1,34 @@
 'use client'
 
 import { useEffect, useRef, useState } from 'react'
+import {
+  GitHubIcon,
+  OdinIcon,
+  MuninnIcon,
+  SifIcon,
+  VidarrIcon,
+  BrokkrIcon,
+  SindriIcon,
+  SifListIcon,
+  SifGenerateIcon,
+  SifCookIcon,
+} from './Icons'
 
-const CHAPTERS = [
-  { key: 'overview',  label: 'Overview'  },
-  { key: 'odin',      label: 'Odin'      },
-  { key: 'muninn',    label: 'Muninn'    },
-  { key: 'sif',       label: 'Sif'       },
-  { key: 'vidarr',    label: 'Víðarr'    },
-  { key: 'brokkr',    label: 'Brokkr'    },
-] as const
+type ChapterIcon = (p: { size?: number; className?: string }) => React.ReactElement
 
-function GitHubIcon() {
+const CHAPTERS: ReadonlyArray<{ key: string; label: string; Icon?: ChapterIcon }> = [
+  { key: 'overview',  label: 'Overview'                     },
+  { key: 'odin',      label: 'Odin',      Icon: OdinIcon    },
+  { key: 'muninn',    label: 'Muninn',    Icon: MuninnIcon  },
+  { key: 'sif',       label: 'Sif',       Icon: SifIcon     },
+  { key: 'vidarr',    label: 'Víðarr',    Icon: VidarrIcon  },
+  { key: 'brokkr',    label: 'Brokkr',    Icon: BrokkrIcon  },
+]
+
+function ChapterTag({ children, Icon }: { children: string; Icon?: ChapterIcon }) {
   return (
-    <svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
-      <path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z" />
-    </svg>
-  )
-}
-
-function ChapterTag({ children }: { children: string }) {
-  return (
-    <div className="font-mono text-[9px] tracking-[0.35em] text-violet-400/60 uppercase mb-5">
+    <div className="flex items-center gap-2 font-mono text-[9px] tracking-[0.35em] text-violet-400/60 uppercase mb-5">
+      {Icon && <Icon size={12} className="text-violet-300/80" />}
       {children}
     </div>
   )
@@ -44,45 +51,67 @@ function Panel({ active, children }: PanelProps) {
   )
 }
 
+/* ── Constellation ─────────────────────────────── */
+
+interface NodeProps {
+  cx: number
+  cy: number
+  r: number
+  stroke: string
+  fill: string
+  tint: string
+  label: string
+  Icon: ChapterIcon
+  iconSize?: number
+  labelSide?: 'below' | 'right'
+  bold?: boolean
+}
+
+/** A god node: ring, glyph inside, label outside. */
+function ConstellationNode({ cx, cy, r, stroke, fill, tint, label, Icon, iconSize = 12, labelSide = 'below', bold }: NodeProps) {
+  const half = iconSize / 2
+  return (
+    <g>
+      <circle cx={cx} cy={cy} r={r} fill={fill} stroke={stroke} strokeWidth={bold ? 1 : 0.75} />
+      <g transform={`translate(${cx - half} ${cy - half})`} style={{ color: tint }}>
+        <Icon size={iconSize} />
+      </g>
+      {labelSide === 'below' ? (
+        <text x={cx} y={cy + r + 9} textAnchor="middle" fill={tint} fontSize={bold ? 8 : 7} fontFamily="monospace" fontWeight={bold ? 'bold' : undefined} letterSpacing={bold ? 1.5 : undefined}>
+          {label}
+        </text>
+      ) : (
+        <text x={cx + r + 5} y={cy + 2.5} textAnchor="start" fill={tint} fontSize="6.5" fontFamily="monospace">
+          {label}
+        </text>
+      )}
+    </g>
+  )
+}
+
 function ConstellationGraph() {
   return (
     <svg
-      viewBox="0 0 320 140"
+      viewBox="0 0 320 156"
       width="320"
-      height="140"
+      height="156"
       aria-label="Pantheon agent constellation"
-      className="opacity-55"
+      className="opacity-60"
     >
       {/* Lines from Odin to each sub-agent */}
-      <line x1="160" y1="70" x2="55"  y2="32"  stroke="#7c3aed" strokeWidth="0.75" strokeDasharray="4 3" />
-      <line x1="160" y1="70" x2="265" y2="32"  stroke="#06b6d4" strokeWidth="0.75" strokeDasharray="4 3" />
-      <line x1="160" y1="70" x2="55"  y2="108" stroke="#10b981" strokeWidth="0.75" strokeDasharray="4 3" />
-      <line x1="160" y1="70" x2="265" y2="108" stroke="#f59e0b" strokeWidth="0.75" strokeDasharray="4 3" />
+      <line x1="160" y1="72" x2="55"  y2="34"  stroke="#7c3aed" strokeWidth="0.75" strokeDasharray="4 3" />
+      <line x1="160" y1="72" x2="265" y2="34"  stroke="#06b6d4" strokeWidth="0.75" strokeDasharray="4 3" />
+      <line x1="160" y1="72" x2="55"  y2="110" stroke="#10b981" strokeWidth="0.75" strokeDasharray="4 3" />
+      <line x1="160" y1="72" x2="265" y2="110" stroke="#f59e0b" strokeWidth="0.75" strokeDasharray="4 3" />
+      {/* Muninn orbits close */}
+      <line x1="160" y1="50" x2="160" y2="26" stroke="#818cf8" strokeWidth="0.75" strokeDasharray="3 2" />
 
-      {/* Odin — center */}
-      <circle cx="160" cy="70" r="22" fill="rgba(124,58,237,0.12)" stroke="#7c3aed" strokeWidth="1" />
-      <text x="160" y="74" textAnchor="middle" fill="white" fontSize="9.5" fontFamily="monospace" fontWeight="bold">ODIN</text>
-
-      {/* Muninn — raven of memory, orbiting close to Odin */}
-      <line x1="160" y1="48" x2="160" y2="22" stroke="#818cf8" strokeWidth="0.75" strokeDasharray="3 2" />
-      <circle cx="160" cy="14" r="12" fill="rgba(99,102,241,0.10)" stroke="#818cf8" strokeWidth="0.75" />
-      <text x="160" y="18" textAnchor="middle" fill="#a5b4fc" fontSize="6.5" fontFamily="monospace">Muninn</text>
-
-      {/* Sif — top-left */}
-      <circle cx="42"  cy="28"  r="16" fill="rgba(124,58,237,0.08)" stroke="#7c3aed" strokeWidth="0.75" />
-      <text x="42"  y="32"  textAnchor="middle" fill="#a78bfa" fontSize="7.5" fontFamily="monospace">Sif</text>
-
-      {/* Víðarr — bottom-left */}
-      <circle cx="42"  cy="112" r="16" fill="rgba(16,185,129,0.08)"  stroke="#10b981" strokeWidth="0.75" />
-      <text x="42"  y="116" textAnchor="middle" fill="#6ee7b7" fontSize="7.5" fontFamily="monospace">Víðarr</text>
-
-      {/* Brokkr — top-right */}
-      <circle cx="278" cy="28"  r="16" fill="rgba(6,182,212,0.08)"   stroke="#06b6d4" strokeWidth="0.75" />
-      <text x="278" y="32"  textAnchor="middle" fill="#67e8f9" fontSize="7.5" fontFamily="monospace">Brokkr</text>
-
-      {/* Sindri — bottom-right */}
-      <circle cx="278" cy="112" r="16" fill="rgba(245,158,11,0.08)"  stroke="#f59e0b" strokeWidth="0.75" />
-      <text x="278" y="116" textAnchor="middle" fill="#fcd34d" fontSize="7.5" fontFamily="monospace">Sindri</text>
+      <ConstellationNode cx={160} cy={72}  r={22} stroke="#7c3aed" fill="rgba(124,58,237,0.12)" tint="#ffffff" label="ODIN"   Icon={OdinIcon}   iconSize={18} bold />
+      <ConstellationNode cx={160} cy={14}  r={12} stroke="#818cf8" fill="rgba(99,102,241,0.10)" tint="#a5b4fc" label="Muninn" Icon={MuninnIcon} iconSize={11} labelSide="right" />
+      <ConstellationNode cx={42}  cy={30}  r={16} stroke="#7c3aed" fill="rgba(124,58,237,0.08)" tint="#a78bfa" label="Sif"    Icon={SifIcon} />
+      <ConstellationNode cx={42}  cy={114} r={16} stroke="#10b981" fill="rgba(16,185,129,0.08)" tint="#6ee7b7" label="Víðarr" Icon={VidarrIcon} />
+      <ConstellationNode cx={278} cy={30}  r={16} stroke="#06b6d4" fill="rgba(6,182,212,0.08)"  tint="#67e8f9" label="Brokkr" Icon={BrokkrIcon} />
+      <ConstellationNode cx={278} cy={114} r={16} stroke="#f59e0b" fill="rgba(245,158,11,0.08)" tint="#fcd34d" label="Sindri" Icon={SindriIcon} />
     </svg>
   )
 }
@@ -98,7 +127,7 @@ function OverviewPanel({ active }: { active: boolean }) {
         <span className="text-white/35">Many gods.</span>
       </h4>
       <p className="text-[14px] text-white/45 leading-relaxed max-w-[52ch] mb-10">
-        Pantheon is a personal AI operating system built around Norse mythology. Each agent is named after a god and solves one specific problem — they orbit Odin, the central orchestrator, who routes tasks, manages memory, and coordinates action across your life.
+        Pantheon is a personal AI operating system built around Norse mythology. Each agent is named after a god and solves one specific problem — they orbit Odin, the central orchestrator, who routes tasks, manages memory, and coordinates action across your life. It runs self-hosted on a Mac Mini, reached from anywhere over Tailscale.
       </p>
       <ConstellationGraph />
     </Panel>
@@ -107,30 +136,41 @@ function OverviewPanel({ active }: { active: boolean }) {
 
 function OdinPanel({ active }: { active: boolean }) {
   const pipeline = [
-    { step: '01', name: 'Voice Input',        detail: 'Web Speech API → natural language'         },
-    { step: '02', name: 'Orchestrator',        detail: 'claude-opus — plans strategy'              },
-    { step: '03', name: 'Router',              detail: 'claude-haiku — classifies intent'          },
-    { step: '04', name: 'Primary Agent',       detail: 'Executes: finance, research, action…'      },
-    { step: '05', name: 'Response Composer',   detail: 'claude-sonnet — voice-formatted reply'     },
+    { step: '01', name: 'Voice In',        detail: 'Web Speech API · native iOS speech · “Hey Siri, talk to Odin”' },
+    { step: '02', name: 'Router',          detail: 'classifies the turn by tier and picks a target'                 },
+    { step: '03', name: 'Muninn',          detail: 'pulls only the memory this turn needs'                          },
+    { step: '04', name: 'Local Inference', detail: 'qwen2.5 on Ollama · stable prompt prefix · first word in ~0.5 s' },
+    { step: '05', name: 'Tools & Agents',  detail: 'Calendar, Gmail, Brave Search, Sonos · Brokkr builds, Sindri researches' },
+    { step: '06', name: 'Voice Out',       detail: 'OpenAI TTS under a hard $5/mo cap → Kokoro local fallback'      },
+  ]
+
+  const latest = [
+    'JARVIS HUD',
+    'Native iOS app',
+    'Siri App Intent',
+    'Kokoro local TTS',
+    'Spend ledger',
+    'Sonos duck & resume',
+    'PWA shell',
   ]
 
   return (
     <Panel active={active}>
-      <ChapterTag>Odin · Central Orchestrator</ChapterTag>
+      <ChapterTag Icon={OdinIcon}>Odin · Central Orchestrator</ChapterTag>
       <h4 className="text-3xl font-bold text-white leading-tight mb-2">
         Speak a command.<br />
         <span className="text-violet-400">Odin routes it.</span>
       </h4>
-      <p className="text-[13px] text-white/35 leading-relaxed max-w-[50ch] mb-7">
-        A multi-agent AI OS. Voice flows through a five-stage pipeline with real-world context from Spotify, Google Calendar, Gmail, and Plaid — then outputs to web, iOS, and Discord simultaneously.
+      <p className="text-[13px] text-white/35 leading-relaxed max-w-[52ch] mb-6">
+        A voice-first, self-hosted AI OS. Chat inference runs locally on Ollama at zero API spend, with Claude held as an escalation path. Every turn is routed by tier, grounded in memory, and spoken back through a budget-capped voice pipeline to the web HUD, the native iOS app, Sonos, and Discord.
       </p>
-      <div className="space-y-2.5 max-w-[44ch]">
+      <div className="space-y-2 max-w-[54ch]">
         {pipeline.map(({ step, name, detail }) => (
           <div key={step} className="flex items-start gap-3.5">
             <div className="w-6 h-6 rounded-full border border-violet-500/30 bg-violet-500/[0.07] flex items-center justify-center flex-shrink-0 mt-0.5">
               <span className="font-mono text-[8px] text-violet-400/70">{step}</span>
             </div>
-            <div className="text-[12px]">
+            <div className="text-[12px] leading-snug">
               <span className="text-white/60 font-semibold">{name}</span>
               <span className="text-white/22 mx-2 text-[10px]">→</span>
               <span className="text-white/30">{detail}</span>
@@ -138,11 +178,21 @@ function OdinPanel({ active }: { active: boolean }) {
           </div>
         ))}
       </div>
+      <div className="mt-6 max-w-[54ch]">
+        <div className="font-mono text-[9px] tracking-[0.3em] text-white/20 uppercase mb-2">Shipped this quarter</div>
+        <div className="flex flex-wrap gap-2">
+          {latest.map(t => (
+            <span key={t} className="font-mono text-[10px] px-2 py-0.5 rounded border border-violet-500/15 text-violet-200/50 bg-violet-500/[0.04]">
+              {t}
+            </span>
+          ))}
+        </div>
+      </div>
       <a
-        href="https://github.com/jarrenpatao/Pantheon"
+        href="https://github.com/jarrenpatao"
         target="_blank"
         rel="noopener noreferrer"
-        className="mt-8 flex items-center gap-1.5 text-xs font-semibold text-white/25 hover:text-violet-400 transition-colors duration-200 w-fit"
+        className="mt-6 flex items-center gap-1.5 text-xs font-semibold text-white/25 hover:text-violet-400 transition-colors duration-200 w-fit"
       >
         <GitHubIcon />
         GitHub
@@ -181,13 +231,13 @@ function MuninnPanel({ active }: { active: boolean }) {
 
   return (
     <Panel active={active}>
-      <ChapterTag>Muninn · Memory Layer</ChapterTag>
+      <ChapterTag Icon={MuninnIcon}>Muninn · Memory Layer</ChapterTag>
       <h4 className="text-3xl font-bold text-white leading-tight mb-2">
         What Odin<br />
         <span className="text-indigo-400">remembers.</span>
       </h4>
       <p className="text-[13px] text-white/35 leading-relaxed max-w-[50ch] mb-6">
-        A three-layer vector memory system. Each request pulls only the context it needs — from a 100-token essence to atomic facts retrieved by cosine similarity. Embeddings are compressed 4× with TurboQuant (Google Research, ICLR&nbsp;2026) and cached for sub-millisecond repeat queries.
+        A three-layer vector memory system. Each request pulls only the context it needs — from a 100-token essence to atomic facts retrieved by cosine similarity. Embeddings are compressed 4× with TurboQuant (Google Research, ICLR&nbsp;2026) and cached for sub-millisecond repeat queries. Retrieval now feeds every live chat turn, and every turn is archived back into the store.
       </p>
       <div className="space-y-2.5 max-w-[46ch]">
         {layers.map(({ num, name, detail, color, border, bg }) => (
@@ -216,26 +266,26 @@ function MuninnPanel({ active }: { active: boolean }) {
 
 function SifPanel({ active }: { active: boolean }) {
   const steps = [
-    { icon: '🥩', label: 'List what you have',         sub: 'Type ingredients, no format required'     },
-    { icon: '⚡', label: 'Claude generates 3 options',  sub: 'Real meals, real ingredients, under 10s'  },
-    { icon: '🍳', label: 'Pick one and cook',           sub: 'No guesswork, no waste'                   },
+    { Icon: SifListIcon,     label: 'List what you have',         sub: 'Type ingredients, no format required'     },
+    { Icon: SifGenerateIcon, label: 'Claude generates 3 options',  sub: 'Real meals, real ingredients, under 10s'  },
+    { Icon: SifCookIcon,     label: 'Pick one and cook',           sub: 'No guesswork, no waste'                   },
   ]
 
   return (
     <Panel active={active}>
-      <ChapterTag>Sif · Meal Planner</ChapterTag>
+      <ChapterTag Icon={SifIcon}>Sif · Meal Planner</ChapterTag>
       <h4 className="text-3xl font-bold text-white leading-tight mb-2">
         What can you make<br />
         <span className="text-violet-400">right now?</span>
       </h4>
       <p className="text-[13px] text-white/35 leading-relaxed max-w-[50ch] mb-8">
-        Tell Sif what's in your kitchen. Get three real meal options in under ten seconds. No sign-up, no subscriptions, no recipe blogs — just Claude and whatever's on your shelf.
+        Tell Sif what&apos;s in your kitchen. Get three real meal options in under ten seconds. No sign-up, no subscriptions, no recipe blogs — just Claude and whatever&apos;s on your shelf.
       </p>
       <div className="space-y-4 max-w-[44ch]">
-        {steps.map(({ icon, label, sub }) => (
+        {steps.map(({ Icon, label, sub }) => (
           <div key={label} className="flex items-start gap-4">
-            <div className="w-8 h-8 rounded-lg border border-violet-500/20 bg-violet-500/[0.06] flex items-center justify-center flex-shrink-0 text-base">
-              {icon}
+            <div className="w-8 h-8 rounded-lg border border-violet-500/20 bg-violet-500/[0.06] flex items-center justify-center flex-shrink-0 text-violet-400">
+              <Icon size={18} />
             </div>
             <div>
               <div className="text-[13px] font-semibold text-white/60 mb-0.5">{label}</div>
@@ -264,7 +314,7 @@ function VidarrPanel({ active }: { active: boolean }) {
 
   return (
     <Panel active={active}>
-      <ChapterTag>Víðarr · Daily Floor Tracker</ChapterTag>
+      <ChapterTag Icon={VidarrIcon}>Víðarr · Daily Floor Tracker</ChapterTag>
       <h4 className="text-3xl font-bold text-white leading-tight mb-2">
         Not your best days.<br />
         <span className="text-emerald-400">Just the floor.</span>
@@ -293,32 +343,35 @@ function VidarrPanel({ active }: { active: boolean }) {
 
 function BrokkrPanel({ active }: { active: boolean }) {
   const capabilities = [
-    { title: 'Repo inspection',      desc: 'Summarize files and map structure without leaving the terminal.'  },
-    { title: 'Implementation plans', desc: 'Draft architecture and task breakdowns before handing off to Claude.' },
-    { title: 'Project memory',       desc: 'Persist context across sessions so nothing is re-explained.'        },
-    { title: 'Claude handoffs',      desc: 'Prepare structured prompts for escalation to stronger models.'      },
+    { Icon: BrokkrIcon, title: 'Build jobs',   desc: 'Brokkr runs a real tool loop — edits files, runs commands, reports back.',            tint: 'text-cyan-400/80'  },
+    { Icon: SindriIcon, title: 'Research',     desc: 'Sindri gathers sources and drafts findings before Odin answers.',                     tint: 'text-amber-300/80' },
+    { Icon: BrokkrIcon, title: 'Budget gate',  desc: 'Build jobs escalate to the Claude API only under a hard nightly cap in the spend ledger.', tint: 'text-cyan-400/80' },
+    { Icon: BrokkrIcon, title: 'Handoffs',     desc: 'Structured prompts and project memory so nothing is re-explained across sessions.',   tint: 'text-cyan-400/80' },
   ]
 
   return (
     <Panel active={active}>
-      <ChapterTag>Brokkr · Local Builder Workshop</ChapterTag>
+      <ChapterTag Icon={BrokkrIcon}>Brokkr & Sindri · Build & Research Agents</ChapterTag>
       <h4 className="text-3xl font-bold text-white leading-tight mb-2">
         The craftsman&apos;s<br />
         <span className="text-cyan-400">workshop.</span>
       </h4>
       <p className="text-[13px] text-white/35 leading-relaxed max-w-[50ch] mb-7">
-        Brokkr runs on-device via Ollama and small local models — no API costs, no cloud dependency. It&apos;s the planning and scaffolding layer where the rest of Pantheon gets built, documented, and handed off.
+        Brokkr is Odin&apos;s build agent; Sindri is its research counterpart. Both run on local models via Ollama by default — no cloud dependency, no surprise bills. Next up: a durable milestone queue and a Tailscale executor so Odin can drive an unattended overnight build on a second machine and only wake you for roadmap decisions.
       </p>
-      <div className="grid grid-cols-2 gap-2.5 max-w-[46ch]">
-        {capabilities.map(({ title, desc }) => (
+      <div className="grid grid-cols-2 gap-2.5 max-w-[48ch]">
+        {capabilities.map(({ Icon, title, desc, tint }) => (
           <div key={title} className="rounded-lg border border-cyan-500/15 bg-cyan-500/[0.04] p-3.5">
-            <div className="text-[12px] font-semibold text-cyan-400/70 mb-1">{title}</div>
+            <div className={`flex items-center gap-1.5 text-[12px] font-semibold mb-1 ${tint}`}>
+              <Icon size={12} />
+              {title}
+            </div>
             <div className="text-[11px] text-white/25 leading-snug">{desc}</div>
           </div>
         ))}
       </div>
       <div className="mt-7 flex flex-wrap gap-2">
-        {['Ollama', 'Local LLM', 'Node.js'].map(t => (
+        {['Ollama', 'Claude API', 'Spend Ledger', 'Node.js'].map(t => (
           <span key={t} className="font-mono text-[10px] px-2 py-0.5 rounded border border-white/[0.06] text-white/25 bg-white/[0.02]">
             {t}
           </span>
@@ -369,17 +422,9 @@ export default function PantheonShowcase() {
           {/* ── Left: Identity ── */}
           <div className="flex flex-col justify-between py-10 px-8 lg:px-10 border-b md:border-b-0 md:border-r border-white/[0.05]">
             <div>
-              {/* Yggdrasil-inspired rune mark */}
-              <div className="mb-8">
-                <svg width="30" height="30" viewBox="0 0 30 30" fill="none" aria-hidden="true">
-                  <circle cx="15" cy="15" r="13.5" stroke="#7c3aed" strokeWidth="0.75" />
-                  <line x1="15" y1="1.5"  x2="15" y2="28.5" stroke="#7c3aed" strokeWidth="0.75" />
-                  <line x1="1.5" y1="15"  x2="28.5" y2="15" stroke="#7c3aed" strokeWidth="0.75" />
-                  <line x1="5"   y1="5"   x2="25"   y2="25" stroke="#7c3aed" strokeWidth="0.5" opacity="0.4" />
-                  <line x1="25"  y1="5"   x2="5"    y2="25" stroke="#7c3aed" strokeWidth="0.5" opacity="0.4" />
-                  <circle cx="15" cy="15" r="3.5" stroke="#7c3aed" strokeWidth="0.75" fill="none" />
-                  <circle cx="15" cy="15" r="1.25" fill="#7c3aed" />
-                </svg>
+              {/* Allfather's Eye — the Odin mark */}
+              <div className="mb-8 w-10 h-10 rounded-xl border border-violet-500/30 bg-violet-500/[0.08] flex items-center justify-center text-white">
+                <OdinIcon size={22} title="Odin" />
               </div>
 
               <div className="font-mono text-[9px] tracking-[0.35em] text-violet-400/55 uppercase mb-2">
@@ -405,9 +450,10 @@ export default function PantheonShowcase() {
                           ? 'w-4 bg-white/20'
                           : 'w-2 bg-white/10'
                     }`} />
-                    <span className={`text-[11px] font-mono tracking-wide transition-colors duration-300 ${
+                    <span className={`flex items-center gap-2 text-[11px] font-mono tracking-wide transition-colors duration-300 ${
                       i === chapter ? 'text-white/80' : i < chapter ? 'text-white/25' : 'text-white/15'
                     }`}>
+                      {c.Icon ? <c.Icon size={11} /> : <span className="inline-block w-[11px]" />}
                       {c.label}
                     </span>
                   </div>
